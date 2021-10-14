@@ -7,9 +7,10 @@
     --color--warmgraylight: #eeedee;
     --color--warmgraydark: #a3acb0;
     --color--coolgray1: #c5c5d2;
-    --color--coolgray2: #8e8ea0;
+    -color--coolgray2: #d8d8dd;
     --color--coolgray3: #6e6e80;
     --color--coolgray4: #404452;
+    --color--darkgray: #3a3a3b;
     --color--black: #050505;
     --color--pink: #e6a2e4;
     --color--magenta: #dd5ce5;
@@ -18,7 +19,8 @@
     --color--orange: #e86c09;
     --color--golden: #f4ac36;
     --color--yellow: #ebe93d;
-    --color--lightgreen: #68de7a;
+    --color--lightgreen: #daffe0;
+    --color--mediumgreen: #0fff2f;
     --color--darkgreen: #10a37f;
     --color--teal: #2ff3ce;
     --color--lightblue: #27b5ea;
@@ -45,8 +47,8 @@ h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
 }
 
 .wy-nav-top {
-  color: var(--color--orange);
-  background-color: var(--color--coolgray4) !important;
+  color: var(--color--darkgreen);
+  background-color: var(--color--lightgreen) !important;
 }
 
 .rst-content .toc-backref {
@@ -55,26 +57,26 @@ h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
 
 .footnote {
   padding-left: 0.75rem;
-  background-color: var(--color--warmgraylight) !important;
+  background-color: var(--color--coolgray2) !important;
 }
 
 .wy-nav-top a, .wy-nav-top a:visited {
- color: var(--color--white) !important;
+ color: var(--color--warmgraylight) !important;
 }
 
 .wy-menu-vertical header, .wy-menu-vertical p.caption {
-  color: var(--color--orange);
+  color: var(--color--darkgreen);
   font-weight: 500 !important;
   letter-spacing: 1px;
   margin-top: 1.25rem;
 }
 
 .wy-side-nav-search {
-  background-color: var(--color--warmgraylight) !important;
+  background-color: var(--color--coolgray2) !important;
 }
 
 .wy-body-for-nav {
-  background-color: var(--color--coolgray1) !important;
+  background-color: var(--color--coolgray2) !important;
 }
 
 .wy-menu-vertical li span.toctree-expand {
@@ -82,8 +84,8 @@ h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
 }
 
 .wy-nav-side {
-  color: var(--color--coolgray1) !important;
-  background-color: var(--color--coolgray4) !important;
+  color: var(--color--coolgray2) !important;
+  background-color: var(--color--darkgray) !important;
 }
 
 .wy-side-nav-search input[type=text] {
@@ -91,46 +93,46 @@ h1, h2, .rst-content .toctree-wrapper p.caption, h3, h4, h5, h6, legend {
 }
 
 a {
-  color: var(--color--orange) !important;
+  color: var(--color--darkgreen) !important;
 }
 
 a:visited {
-  color: #9B59B6 !important;
+  color: var(--color--darkgreen) !important;
 }
 
 .wy-menu-vertical a {
-  color: var(--color--coolgray2) !important;
+  color: var(--color--white) !important;
 }
 
 .wy-menu-vertical li.current a {
   border-right: none !important;
-  color: var(--color--coolgray4) !important;
+  color: var(--color--darkgray) !important;
 }
 
 .wy-menu-vertical li.current {
-  background-color: var(--color--warmgraylight) !important;
+  background-color: var(--color--coolgray2) !important;
 }
 
 .wy-menu-vertical li.toctree-l2.current>a {
-  background-color: var(--color--coolgray1) !important;
+  background-color: var(--color--coolgray2) !important;
 }
 
 .wy-menu-vertical a:hover, .wy-menu-vertical li.current a:hover, .wy-menu-vertical li.toctree-l2.current>a:hover {
   color: var(--color--warmgraylight) !important;
-  background-color: var(--color--coolgray3) !important;
+  background-color: var(--color--coolgray2) !important;
 }
 
 .wy-alert-title, .rst-content .admonition-title{
-  background-color: var(--color--orange) !important;
+  background-color: var(--color--darkgreen) !important;
 }
 
 .wy-alert, .rst-content .note, .rst-content .attention, .rst-content .caution, .rst-content .danger, .rst-content .error, .rst-content .hint, .rst-content .important, .rst-content .tip, .rst-content .warning, .rst-content .seealso, .rst-content .admonition-todo, .rst-content .admonition {
-  background-color: var(--color--warmgraylight) !important;
+  background-color: var(--color--coolgray2) !important;
 }
 
 .rst-content dl:not(.docutils) dt {
   border-color: var(--color--mediumblue) !important;
-  background-color: var(--color--warmgraylight) !important;
+  background-color: var(--color--coolgray2) !important;
 }
 
 /* .rst-content pre.literal-block, .rst-content div[class^='highlight'] {
@@ -138,14 +140,14 @@ a:visited {
 } */
 
 .wy-table-odd td, .wy-table-striped tr:nth-child(2n-1) td, .rst-content table.docutils:not(.field-list) tr:nth-child(2n-1) td {
-  background-color: var(--color--warmgraylight) !important;
+  background-color: var(--color--coolgray2) !important;
 }
 
 
 
 @media screen and (min-width: 1100px) {
   .wy-nav-content-wrap {
-      background-color: var(--color--warmgraylight) !important;
+      background-color: var(--color--coolgray2) !important;
   }
 }
 

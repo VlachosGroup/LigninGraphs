@@ -6,7 +6,9 @@
 SPHINXOPTS    ?=
 SPHINXBUILD   ?= sphinx-build
 SOURCEDIR     = source
-BUILDDIR      = build
+BUILDDIR      = ../../LigninGraphs-docs
+PDFBUILDDIR   = /tmp
+PDF           = ../manual.pdf
 
 # Put it first so that "make" without argument is like "make help".
 help:
