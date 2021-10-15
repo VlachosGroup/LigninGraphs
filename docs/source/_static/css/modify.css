@@ -140,6 +140,7 @@ a:visited {
   background-color: var(--color--coolgray2) !important;
 }
 
+/*function in api border color*/
 .rst-content dl:not(.docutils) dt {
   border-color: var(--color--mediumblue) !important;
   background-color: var(--color--coolgray2) !important;
@@ -154,10 +155,10 @@ a:visited {
 }
 
 
-
+/*the rest of the screen color*/
 @media screen and (min-width: 1100px) {
   .wy-nav-content-wrap {
-      background-color: var(--color--coolgray2) !important;
+      background-color: var(--color--white) !important;
   }
 }
 
