@@ -14,14 +14,34 @@ Welcome to LigninGraphs's documentation!
 
 .. toctree::
    :maxdepth: 1
+   :caption: User Documentation
+
+   user/introduction
+   user/installation
+   user/overview
+   user/rules
+   user/monomer
+   user/polymerization
+   user/characterization
+   user/optimization
+   user/examples
+
+.. toctree::
+   :maxdepth: 1
    :caption: API Reference
 
-   api/io
-   api/doe
-   api/parameter
+   api/monomer
+   api/polymer
+   api/characterization
+   api/optimization
    api/utils
-   api/bo
-   api/plotting
+
+.. toctree::
+   :maxdepth: 1
+   :caption: ETC
+
+   etc/acknowledgements
+   etc/about
 
 Indices and tables
 ==================

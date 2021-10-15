@@ -39,14 +39,14 @@ import matplotlib.pyplot as plt
 # if platform.system() == 'Linux':
 #     plt.switch_backend('agg')
     
-font = {'size'   : 20}
+# font = {'size'   : 20}
 
-matplotlib.rc('font', **font)
-matplotlib.rcParams['axes.linewidth'] = 1.5
-matplotlib.rcParams['xtick.major.size'] = 8
-matplotlib.rcParams['xtick.major.width'] = 2
-matplotlib.rcParams['ytick.major.size'] = 8
-matplotlib.rcParams['figure.dpi'] = 300.
+# matplotlib.rc('font', **font)
+# matplotlib.rcParams['axes.linewidth'] = 1.5
+# matplotlib.rcParams['xtick.major.size'] = 8
+# matplotlib.rcParams['xtick.major.width'] = 2
+# matplotlib.rcParams['ytick.major.size'] = 8
+# matplotlib.rcParams['figure.dpi'] = 300.
 
 
 def draw_graph(
