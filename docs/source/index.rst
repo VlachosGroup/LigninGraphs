@@ -12,7 +12,16 @@ Welcome to LigninGraphs's documentation!
 
    includeme
 
+.. toctree::
+   :maxdepth: 1
+   :caption: API Reference
 
+   api/io
+   api/doe
+   api/parameter
+   api/utils
+   api/bo
+   api/plotting
 
 Indices and tables
 ==================
