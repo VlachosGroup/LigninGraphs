@@ -6,15 +6,16 @@ LigninGraphs
 .. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5144404.svg
    :target: https://doi.org/10.5281/zenodo.5144404
 
-NEXTorch is an open-source software package in Python/PyTorch to faciliate 
-experimental design using Bayesian Optimization (BO). 
+LigninGraphs is an open-source software package in Python to generate feasible lignin structures. 
 
-NEXTorch stands for Next EXperiment toolkit in PyTorch/BoTorch. 
-It is also a library for learning the theory and implementation of Bayesian Optimization.
-
+Lignin is an aromatic biopolymer found in ubiquitous sources of woody biomass such as wood and bark.
+Designing and optimizing lignin valorization processes requires a fundamental understanding of lignin structures.
+We introduce a graph-based multiscale modeling framework for lignin structure generation and visualization. 
+The framework employs accelerated rejection-free polymerization and hierarchical Metropolis Monte Carlo optimization algorithms. 
+It can be used to generate feasible lignin strutcures to match experimental or literature data. 
 
 .. image:: https://github.com/VlachosGroup/nextorch/blob/62b6163d65d2b49fdb8f6d3485af3222f4409500/docs/source/logos/nextorch_logo_doc.png
-   :target: https://nextorch.readthedocs.io/en/latest/
+
 
 Documentation
 -------------
@@ -26,17 +27,16 @@ Developers
 ----------
 
 -  Yifan Wang (wangyf@udel.edu)
--  Tai-Ying (Chris) Chen (tychen@udel.edu)
+-  Jake Kalscheur (jkalsch@udel.edu)
 
 Dependencies
 ------------
 
 -  Python >= 3.7
--  `PyTorch`_ >= 1.8: Used for tensor operations with GPU and autograd support
--  `GPyTorch`_ >= 1.4: Used for training Gaussian Processes
--  `BoTorch`_ >= 0.4.0: Used for providing Bayesian Optimization framework
+-  `RDKit`_ >= 2021.09.1: Used for constructing feasible chemical structures 
+-  `Networkx`_ >= 1.4: Used for computational graph operations
+-  `Pysmiles`_ >= 1.0.1: Used for reading and writing smiles strings from/to graphs
 -  `Matplotlib`_: Used for generating plots
--  `PyDOE2`_: Used for constructing experimental designs
 -  `Numpy`_: Used for vector and matrix operations
 -  `Scipy`_: Used for curve fitting
 -  `Pandas`_: Used to import data from Excel or CSV files
@@ -44,12 +44,11 @@ Dependencies
 -  `pytest`_: Used for unit tests
 
 
-.. _documentation page: https://nextorch.readthedocs.io/en/latest/
-.. _PyTorch: https://pytorch.org/
-.. _GPyTorch: https://gpytorch.ai/ 
-.. _BoTorch: https://botorch.org/
+.. _documentation page: https://ligningraphs.readthedocs.io/en/latest/
+.. _RDKit: https://www.rdkit.org/docs/Overview.html
+.. _Networkx: https://networkx.org/
+.. _Pysmiles: https://github.com/pckroon/pysmiles
 .. _Matplotlib: https://matplotlib.org/
-.. _pyDOE2: https://pythonhosted.org/pyDOE/
 .. _Numpy: http://www.numpy.org/
 .. _Scipy: https://www.scipy.org/
 .. _Pandas: https://pandas.pydata.org/
@@ -63,7 +62,7 @@ Getting Started
 
 1. Install using pip (see documentation for full instructions)::
 
-    pip install nextorch
+    pip install ligningraphs
 
 2. Run the unit tests.
 
@@ -101,5 +100,5 @@ Acknowledgements
   
 
 Publications
-------------
+--------------
 
