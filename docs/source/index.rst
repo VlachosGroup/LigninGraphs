@@ -19,8 +19,7 @@ Welcome to LigninGraphs's documentation!
    user/introduction
    user/installation
    user/overview
-   user/rules
-   user/monomer
+   user/blocks
    user/polymerization
    user/characterization
    user/optimization
