@@ -15,7 +15,7 @@ The framework employs accelerated rejection-free polymerization and hierarchical
 It can be used to generate feasible lignin strutcures to match experimental or literature data. 
 
 .. image:: docs/source/logos/ligning_logo.png
-
+    :width: 100px
 
 Documentation
 -------------
