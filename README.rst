@@ -14,7 +14,7 @@ We introduce a graph-based multiscale modeling framework for lignin structure ge
 The framework employs accelerated rejection-free polymerization and hierarchical Metropolis Monte Carlo optimization algorithms. 
 It can be used to generate feasible lignin strutcures to match experimental or literature data. 
 
-.. image:: https://github.com/VlachosGroup/nextorch/blob/62b6163d65d2b49fdb8f6d3485af3222f4409500/docs/source/logos/nextorch_logo_doc.png
+.. image:: docs/source/logos/ligning_logo.png
 
 
 Documentation
