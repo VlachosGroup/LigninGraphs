@@ -13,6 +13,6 @@ Award Number DE-EE0007888-9.5.
 Speical Thanks
 ===============
 
--  Jaynell Keely (Logo design)
+-  Siyi Huang (Logo design)
 -  Dionisios Vlachos 
 -  Sanjana Srinivas

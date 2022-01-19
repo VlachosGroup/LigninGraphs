@@ -2,10 +2,12 @@
 Bluiding Blocks
 ===================
 
+.. image:: ../_images/blocks.SVG
+
 Monomers
 -----------------
 
-The figure shows the three monomer units in lignin, p-hydroxyphenyl (H), syringyl (S), guaiacyl (G). 
+Figure a shows the three monomer units in lignin, p-hydroxyphenyl (H), syringyl (S), guaiacyl (G). 
 We assign an atomic index to each C and O atom in a monomer following the standard convention. 
 α stands for the 7th C and β stands for the 8th C. 
 Such index information is useful to correctly bond atoms as linkages in graph representations.
@@ -14,7 +16,7 @@ Such index information is useful to correctly bond atoms as linkages in graph re
 Linkages
 -----------------
 
-The figure shows example dimmers consisting of the six common linkages, 
+Figure b shows example dimmers consisting of the six common linkages, 
 namely α-O-4, β-O-4, 5-5, 4-O-5, β-β, and β-5. 
 
 

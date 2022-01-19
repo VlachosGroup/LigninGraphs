@@ -6,8 +6,7 @@ Installing Python
 -----------------
 Anaconda is the recommended method to install Python for scientific
 applications. It is supported on Linux, Windows and Mac OS X.
-`Download Anaconda here`_. Note that LigninGraphs runs on Python 3.7 and above.
-
+`Download Anaconda here`_. Note that NEXTorch runs on Python 3.7 and above.
 
 
 Installing LigninGraphs using pip
@@ -40,3 +39,4 @@ To upgrade to a newer release, use the --upgrade flag:
     pip install --upgrade ligningraphs
 
 
+.. _`Download Anaconda here`: https://www.anaconda.com/distribution/#download-section
