@@ -6,9 +6,9 @@ Example Notebooks
 Tutorials
 ---------------------------------------
 
-- Import LigninGraphs
-- Structure visualization
-- Create linkages, rings
+* Import LigninGraphs
+* Structure visualization
+* Create linkages, rings
 
 .. nbgallery::
     :name: example-tutorials
@@ -27,9 +27,9 @@ Tutorials
 Structure libraries
 ---------------------------------------
 
-- Libraries for miscanthus lignin
-- Libraries for pine lignin 
-- Libraries for poplar lignin 
+* Libraries for miscanthus lignin
+* Libraries for pine lignin 
+* Libraries for poplar lignin 
 
 .. nbgallery::
     :name: example-libraries

@@ -123,18 +123,3 @@ nbsphinx_execute_arguments = [
     "--InlineBackend.figure_formats={'svg', 'pdf'}",
     "--InlineBackend.rc={'figure.dpi': 96}",
 ]
-# nbsphinx_thumbnails = {
-#     'examples/01_simple_1d': 'examples/_images/01.png',
-#     'examples/02_sin_1d': 'examples/_images/02.png',
-#     'examples/03_LH_mechanism': 'examples/_images/03.png',
-#     'examples/04_NDC_catalyst': 'examples/_images/04.png',
-#     'examples/05_PFR_yield': 'examples/_images/05.png',
-#     'examples/06_ellipse_MOO': 'examples/_images/06.png',
-#     'examples/07_PFR_MOO': 'examples/_images/07.png',
-#     'examples/08_Stub_tuner': 'examples/_images/08.png',
-#     'examples/09_Stub_tuner_MOO': 'examples/_images/09.png',
-#     'examples/10_PFR_mixed_type_inputs': 'examples/_images/10.png',
-#     'examples/11_PFR_EHVI_MOO': 'examples/_images/11.png',
-#     'examples/12_PFR_yield_extension': 'examples/_images/12.png',
-#     'examples/13_Using_Ax': 'examples/_images/13.png'
-# }
