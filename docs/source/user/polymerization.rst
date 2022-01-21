@@ -24,6 +24,65 @@ We quickly narrow down the suitable C1 atoms by taking the intersections of the 
 From a C2 index, one could use the reverse mapping in (b) and determine the correct monomer type for the addition (C2→M2). 
 A new edge in the graph is connected, and its “bonding” properties are marked as False. 
 
-
 Each addition is essentially a rejection-free Monte Carlo event, i.e., a monomer and a linkage are always added. We achieve a linear time (O(n), where n is the polymer size, for each addition and eliminate unsuccessful attempts. 
 Users may add a specific monomer, linkage (e.g., a ring formation with no monomer), or ring, and a random monomer or ring. The rules ensure that the structures are always chemically valid. 
+
+A `polymer` object can be inherited from a `Monomer` object.
+
+.. code-block::
+
+     import ligning.monomer as mono
+     import ligning.polymer as poly
+     # create a monomer object first
+     P0 = mono.Monomer("G")
+     P0_G = P0.create()
+     # initialize a polymer object with a monomer
+     polymer = poly.Polymer(P0)
+
+The user can add a specific linkage or monomer using the following functions:
+1. Add a specific linkage type and a specific monomer
+
+.. code-block::
+
+     # Add a G unit and a specific linkage type
+     polymer.add_specific_linkage(linkage_type = 'beta-O-4', monomer_type = 'G')
+
+
+2. Given a specific linkage type, add a possible monomer at random
+
+.. code-block::
+
+     # Add a specific linkage type
+     polymer.add_specific_linkage(linkage_type = 'beta-5') 
+
+3. Given a specific monomer type, add a possible linkage at random
+
+.. code-block::
+
+     # Only specify the monomer type
+     polymer.add_specific_monomer(monomer_type = 'S') 
+
+
+4. Add a possible linkage and monomer at random 
+
+.. code-block::
+
+     # No need to specify
+     polymer.add_random_monomer()
+
+
+5. Add a ring with a specific linkage type 
+
+.. code-block::
+
+     # No need to specify
+     polymer.add_specific_ring(linkage_type = 'beta-5')
+
+6. Add a possible ring at random 
+
+.. code-block::
+
+     # No need to specify
+     polymer.add_random_ring()
+
+
