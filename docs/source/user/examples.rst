@@ -17,8 +17,8 @@ Tutorials
     ../examples/01_import
     ../examples/02_polymer_chain
     ../examples/03_visualization
-    ../examples/04_specific_linkage
-    ../examples/05_random_linkage
+    ../examples/04_specific_linkages
+    ../examples/05_random_linkages
     ../examples/06_specific_ring
     ../examples/07_random_ring
     ../examples/08_branching
