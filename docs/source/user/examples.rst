@@ -1,23 +1,40 @@
 ===================
-Example Libraries
+Example Notebooks
 ===================
 
 
-Multi-Objective Optimization(MOO)
---------------------------------------------
+Tutorials
+---------------------------------------
 
-Demo for MOO systems 
+- Libraries for miscanthus lignin
+- Libraries for pine lignin 
+- Libraries for poplar lignin 
 
-- Example 6, 7 and 9: MOO with the weighted sum method
-- Example 11: MOO with EHVI
+.. nbgallery::
+    :name: example-tutorials
+    :glob:
 
+    ../examples/01_Miscanthus_Optimal
+    ../examples/02_Pine_Optimal_Branching
+    ../examples/03_Pine_Optimal_NoBranching
+    ../examples/04_Poplar_Optimal_Branching
+    ../examples/05_Poplar_Optimal_NoBranching
+
+
+
+Structure libraries
+---------------------------------------
+
+- Libraries for miscanthus lignin
+- Libraries for pine lignin 
+- Libraries for poplar lignin 
 
 .. nbgallery::
     :name: example-libraries
     :glob:
 
-    ../examples/Miscanthus_Optimal
-    ../examples/Pine_Optimal_Branching
-    ../examples/Pine_Optimal_NoBranching
-    ../examples/Poplar_Optimal_Branching
-    ../examples/Poplar_Optimal_NoBranching
+    ../examples/01_Miscanthus_Optimal
+    ../examples/02_Pine_Optimal_Branching
+    ../examples/03_Pine_Optimal_NoBranching
+    ../examples/04_Poplar_Optimal_Branching
+    ../examples/05_Poplar_Optimal_NoBranching

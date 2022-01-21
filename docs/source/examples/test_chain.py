@@ -45,9 +45,14 @@ for i in range(n_iter):
 n_monomer = n_iter + 2
 P_mol = ut.graph_to_mol(polymer.G)
 
+#%% Characterize the polymer
 
+# Calculate and print the polymer properties using the graphs
 ch1 = ch.CharacterizeGraph(polymer.G)
+print("\nCharaterizing the polymer...\n")
 ch1.cal_all()
 
+# Calculate and print the polymer properties using the graphs and big graphs
 ch2 = ch.Characterize(polymer)
+print("\nCharaterizing the polymer...\n")
 ch2.cal_all()
