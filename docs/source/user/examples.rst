@@ -6,20 +6,22 @@ Example Notebooks
 Tutorials
 ---------------------------------------
 
-- Libraries for miscanthus lignin
-- Libraries for pine lignin 
-- Libraries for poplar lignin 
+- Import LigninGraphs
+- Structure visualization
+- Create linkages, rings
 
 .. nbgallery::
     :name: example-tutorials
     :glob:
 
-    ../examples/01_Miscanthus_Optimal
-    ../examples/02_Pine_Optimal_Branching
-    ../examples/03_Pine_Optimal_NoBranching
-    ../examples/04_Poplar_Optimal_Branching
-    ../examples/05_Poplar_Optimal_NoBranching
-
+    ../examples/01_import
+    ../examples/02_polymer_chain
+    ../examples/03_visualization
+    ../examples/04_specific_linkage
+    ../examples/05_random_linkage
+    ../examples/06_specific_ring
+    ../examples/07_random_ring
+    ../examples/08_branching
 
 
 Structure libraries
@@ -33,8 +35,8 @@ Structure libraries
     :name: example-libraries
     :glob:
 
-    ../examples/01_Miscanthus_Optimal
-    ../examples/02_Pine_Optimal_Branching
-    ../examples/03_Pine_Optimal_NoBranching
-    ../examples/04_Poplar_Optimal_Branching
-    ../examples/05_Poplar_Optimal_NoBranching
+    ../examples/09_miscanthus_optimal
+    ../examples/10_pine_optimal_branching
+    ../examples/11_pine_optimal_nonbranching
+    ../examples/12_poplar_optimal_branching
+    ../examples/13_poplar_optimal_nonbranching
