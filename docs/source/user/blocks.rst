@@ -16,6 +16,7 @@ To create a monomer object, use following code.
 The input to initialize the `Monomer` class can be 'H', 'G' or 'S'.
 
 .. code-block::
+
     import ligning.monomer as mono
     # create a monomer object
     G = mono.Monomer("G")
