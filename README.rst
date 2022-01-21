@@ -3,9 +3,6 @@ LigninGraphs
 ==============
  
 
-.. image:: https://zenodo.org/badge/DOI/10.5281/zenodo.5144404.svg
-   :target: https://doi.org/10.5281/zenodo.5144404
-
 LigninGraphs is an open-source software package in Python to generate feasible lignin structures. 
 
 Lignin is an aromatic biopolymer found in ubiquitous sources of woody biomass such as wood and bark.
