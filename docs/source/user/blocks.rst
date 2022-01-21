@@ -12,6 +12,15 @@ We assign an atomic index to each C and O atom in a monomer following the standa
 α stands for the 7th C and β stands for the 8th C. 
 Such index information is useful to correctly bond atoms as linkages in graph representations.
 
+To create a monomer object, use following code. 
+The input to initialize the `Monomer` class can be 'H', 'G' or 'S'.
+
+.. code-block::
+    import ligning.monomer as mono
+    # create a monomer object
+    G = mono.Monomer("G")
+    # create its graph
+    G_G = G.create()
 
 Linkages
 -----------------
