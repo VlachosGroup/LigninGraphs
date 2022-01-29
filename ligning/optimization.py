@@ -478,7 +478,7 @@ class Simulation(Trajectory):
                         verbose)
         
         # Set up io path
-        ResultsPathParent = os.path.join(save_path, 'results', library_name)
+        ResultsPathParent = os.path.join(save_path, 'demo_results', library_name)
         if not os.path.exists(ResultsPathParent): os.mkdir(ResultsPathParent)
 
         # Determine previous trials in library
