@@ -401,6 +401,7 @@ class Simulation(Trajectory):
         Tmetro_out: int,
         seed_init: Optional[int] = 1,
         library_name: Optional[str] = 'lignin_x',
+        ResultsName: Optional[str] = 'results',
         trial_index: Optional[int] = None,
         n_population: Optional[int] = 100,
         i_max: Optional[int] = 1000,
@@ -478,7 +479,7 @@ class Simulation(Trajectory):
                         verbose)
         
         # Set up io path
-        ResultsPathParent = os.path.join(save_path, 'demo_results', library_name)
+        ResultsPathParent = os.path.join(save_path, ResultsName, library_name)
         if not os.path.exists(ResultsPathParent): os.mkdir(ResultsPathParent)
 
         # Determine previous trials in library
@@ -774,9 +775,9 @@ class Simulation(Trajectory):
         # Save population data to csv files 
         self.P_population = P_population
         if (self.trial_index==None):
-            population = ch.Population(P_population, self.library_name)
+            population = ch.Population(P_population, self.library_name, ResultsName=ResultsName)
         else:
-            population = ch.Population(P_population, self.library_name, TrialIndex=str(self.trial_index))
+            population = ch.Population(P_population, self.library_name, ResultsName=ResultsName, TrialIndex=str(self.trial_index))
         population.analyze()
 
         # the metrics average including branching coeff and MW
