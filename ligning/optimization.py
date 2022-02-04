@@ -694,6 +694,9 @@ class Simulation(Trajectory):
         # Add rings
         distance_polymer_w_ring = []
         distance_w_ring = np.Inf
+        
+        ring_count=0
+        ring_iterations=0
         if (self.branching_propensity is None) or (self.branching_propensity > 0.0):
             counts_population_w_ring = []
             monomer_count_population_w_ring = []
@@ -702,10 +705,9 @@ class Simulation(Trajectory):
             
             metrics_population_w_ring = []
             
-            start = time.time()
             polymer_no=1
-            ring_count=0
-            ring_iterations=0
+            start = time.time()
+            
             for Pi, ri in zip(P_population, rseeds):
                 P_i, distance_i, acceptance_count, ring_its = traj.run_MCMC_ring(Pi, ri, self.i_max_ring)
 
@@ -816,7 +818,7 @@ class Simulation(Trajectory):
         print('\nAcceptance Rates')
         print('Monomer Acceptance: {}'.format(monomer_accepted/monomer_iterations))
         print('Polymer Acceptance: {}'.format(n_polymers/(i_step-1)))
-        if (self.branching_propensity is None) or (self.branching_propensity > 0.0):
+        if (ring_iterations==0):
             print('Ring Acceptance: {}'.format(ring_count/ring_iterations))
         
         print('Runtime for analyzing the results : {:.2f} minutes \n'.format((end-start)/60))
@@ -829,7 +831,7 @@ class Simulation(Trajectory):
         file.write('\nAcceptance Rates:\n')
         file.write('Monomer Acceptance: {}\n'.format(monomer_accepted/monomer_iterations))
         file.write('Polymer Acceptance: {}\n'.format(n_polymers/(i_step-1)))
-        if (self.branching_propensity is None) or (self.branching_propensity > 0.0):
+        if (ring_iterations==0):
             file.write('Ring Acceptance: {}\n'.format(ring_count/ring_iterations))
         file.write('Runtime for analyzing the results : {:.2f} minutes \n'.format((end-start)/60))
         file.close()
