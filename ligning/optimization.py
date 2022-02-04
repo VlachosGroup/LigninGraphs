@@ -776,9 +776,9 @@ class Simulation(Trajectory):
         # Save population data to csv files 
         self.P_population = P_population
         if (self.trial_index==None):
-            population = ch.Population(P_population, self.library_name, ResultsName=ResultsName)
+            population = ch.Population(P_population, self.library_name, ResultsName=self.ResultsName)
         else:
-            population = ch.Population(P_population, self.library_name, ResultsName=ResultsName, TrialIndex=str(self.trial_index))
+            population = ch.Population(P_population, self.library_name, ResultsName=self.ResultsName, TrialIndex=str(self.trial_index))
         population.analyze()
 
         # the metrics average including branching coeff and MW
