@@ -816,7 +816,8 @@ class Simulation(Trajectory):
         print('\nAcceptance Rates')
         print('Monomer Acceptance: {}'.format(monomer_accepted/monomer_iterations))
         print('Polymer Acceptance: {}'.format(n_polymers/(i_step-1)))
-        print('Ring Acceptance: {}'.format(ring_count/ring_iterations))
+        if (self.branching_propensity is None) or (self.branching_propensity > 0.0):
+            print('Ring Acceptance: {}'.format(ring_count/ring_iterations))
         
         print('Runtime for analyzing the results : {:.2f} minutes \n'.format((end-start)/60))
 
