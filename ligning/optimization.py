@@ -514,6 +514,7 @@ class Simulation(Trajectory):
         self.i_max_out = i_max_out
         self.i_max_ring = i_max_ring
         self.population_metrics = population_metrics
+        self.ResultsName=ResultsName
         self.ResultsPath = ResultsPath
         self.P_population = None
         self.metrics_current_dict= None
