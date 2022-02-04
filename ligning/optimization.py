@@ -829,7 +829,8 @@ class Simulation(Trajectory):
         file.write('\nAcceptance Rates:\n')
         file.write('Monomer Acceptance: {}\n'.format(monomer_accepted/monomer_iterations))
         file.write('Polymer Acceptance: {}\n'.format(n_polymers/(i_step-1)))
-        file.write('Ring Acceptance: {}\n'.format(ring_count/ring_iterations))
+        if (self.branching_propensity is None) or (self.branching_propensity > 0.0):
+            file.write('Ring Acceptance: {}\n'.format(ring_count/ring_iterations))
         file.write('Runtime for analyzing the results : {:.2f} minutes \n'.format((end-start)/60))
         file.close()
 
