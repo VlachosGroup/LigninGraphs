@@ -666,7 +666,7 @@
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
 		6 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 0 added on iteration no 0 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -1086,7 +1086,7 @@
 		6 monomers after MC step 447
 		6 monomers after MC step 448
 		7 monomers after MC step 449
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	n_polymer 1 added on iteration no 1 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -1387,7 +1387,7 @@
 		6 monomers after MC step 316
 		7 monomers after MC step 317
 		8 monomers after MC step 319
-		Polymerization takes 0.0 min
+		Polymerization takes 0.1 min
 	Polymer addition rejected
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -2231,7 +2231,7 @@
 		4 monomers after MC step 999
 		4 monomers after MC step 1000
 		4 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 2 added on iteration no 3 
 		2 monomers after MC step 2
 		3 monomers after MC step 3
@@ -2490,7 +2490,7 @@
 		5 monomers after MC step 242
 		5 monomers after MC step 243
 		6 monomers after MC step 244
-		Polymerization takes 0.0 min
+		Polymerization takes 0.1 min
 	n_polymer 4 added on iteration no 5 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -3541,7 +3541,7 @@
 		7 monomers after MC step 998
 		7 monomers after MC step 999
 		7 monomers after MC step 1001
-		Polymerization takes 0.3 min
+		Polymerization takes 0.5 min
 	n_polymer 6 added on iteration no 7 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -4236,7 +4236,7 @@
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
 		6 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 7 added on iteration no 8 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -5249,7 +5249,7 @@
 		5 monomers after MC step 999
 		5 monomers after MC step 1000
 		5 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.4 min
 	n_polymer 8 added on iteration no 10 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -6070,7 +6070,7 @@
 		4 monomers after MC step 998
 		4 monomers after MC step 999
 		4 monomers after MC step 1001
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	n_polymer 10 added on iteration no 12 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -6916,7 +6916,7 @@
 		7 monomers after MC step 999
 		7 monomers after MC step 1000
 		7 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.4 min
 	n_polymer 12 added on iteration no 14 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -7754,7 +7754,7 @@
 		7 monomers after MC step 999
 		7 monomers after MC step 1000
 		7 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.4 min
 	n_polymer 13 added on iteration no 15 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -8346,7 +8346,7 @@
 		5 monomers after MC step 539
 		5 monomers after MC step 540
 		6 monomers after MC step 542
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	n_polymer 16 added on iteration no 18 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -9254,7 +9254,7 @@
 		7 monomers after MC step 998
 		7 monomers after MC step 1000
 		7 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.4 min
 	n_polymer 17 added on iteration no 19 
 		2 monomers after MC step 3
 		3 monomers after MC step 4
@@ -9938,7 +9938,7 @@
 		5 monomers after MC step 994
 		5 monomers after MC step 996
 		5 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 18 added on iteration no 20 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -10885,7 +10885,7 @@
 		5 monomers after MC step 999
 		5 monomers after MC step 1000
 		5 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 20 added on iteration no 22 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -11735,7 +11735,7 @@
 		4 monomers after MC step 998
 		4 monomers after MC step 1000
 		4 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 21 added on iteration no 23 
 		1 monomers after MC step 1
 		2 monomers after MC step 2
@@ -12670,7 +12670,7 @@
 		7 monomers after MC step 999
 		7 monomers after MC step 1000
 		7 monomers after MC step 1001
-		Polymerization takes 0.3 min
+		Polymerization takes 0.5 min
 	n_polymer 22 added on iteration no 24 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -13800,7 +13800,7 @@
 		5 monomers after MC step 575
 		5 monomers after MC step 576
 		6 monomers after MC step 577
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	n_polymer 23 added on iteration no 26 
 		2 monomers after MC step 1
 		3 monomers after MC step 3
@@ -14620,7 +14620,7 @@
 		7 monomers after MC step 999
 		7 monomers after MC step 1000
 		7 monomers after MC step 1001
-		Polymerization takes 0.3 min
+		Polymerization takes 0.4 min
 	n_polymer 24 added on iteration no 27 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -15389,7 +15389,7 @@
 		5 monomers after MC step 997
 		5 monomers after MC step 998
 		5 monomers after MC step 1000
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 26 added on iteration no 29 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -16130,7 +16130,7 @@
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
 		6 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 28 added on iteration no 32 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -17063,7 +17063,7 @@
 		4 monomers after MC step 999
 		4 monomers after MC step 1000
 		4 monomers after MC step 1001
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	n_polymer 30 added on iteration no 34 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -18215,7 +18215,7 @@
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
 		6 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.4 min
 	n_polymer 35 added on iteration no 39 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -18777,7 +18777,7 @@
 		7 monomers after MC step 268
 		8 monomers after MC step 269
 		8 monomers after MC step 270
-		Polymerization takes 0.0 min
+		Polymerization takes 0.1 min
 	Polymer addition rejected
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -19611,7 +19611,7 @@
 		5 monomers after MC step 999
 		5 monomers after MC step 1000
 		5 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 37 added on iteration no 42 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -20444,7 +20444,7 @@
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
 		6 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 38 added on iteration no 43 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -21305,7 +21305,7 @@
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
 		6 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.4 min
 	Polymer addition rejected
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -22146,7 +22146,7 @@
 		4 monomers after MC step 999
 		4 monomers after MC step 1000
 		4 monomers after MC step 1001
-		Polymerization takes 0.1 min
+		Polymerization takes 0.3 min
 	n_polymer 40 added on iteration no 46 
 		2 monomers after MC step 1
 		3 monomers after MC step 3
@@ -23179,7 +23179,7 @@
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
 		6 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.4 min
 	n_polymer 42 added on iteration no 48 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -23875,7 +23875,7 @@
 		5 monomers after MC step 999
 		5 monomers after MC step 1000
 		5 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 43 added on iteration no 49 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -24898,7 +24898,7 @@
 		7 monomers after MC step 999
 		7 monomers after MC step 1000
 		7 monomers after MC step 1001
-		Polymerization takes 0.1 min
+		Polymerization takes 0.3 min
 	n_polymer 45 added on iteration no 51 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -25770,7 +25770,7 @@
 		7 monomers after MC step 931
 		7 monomers after MC step 932
 		8 monomers after MC step 933
-		Polymerization takes 0.2 min
+		Polymerization takes 0.4 min
 	n_polymer 46 added on iteration no 52 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -26576,7 +26576,7 @@
 		5 monomers after MC step 999
 		5 monomers after MC step 1000
 		5 monomers after MC step 1001
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	n_polymer 47 added on iteration no 54 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -26739,7 +26739,7 @@
 		6 monomers after MC step 186
 		6 monomers after MC step 187
 		6 monomers after MC step 189
-		Polymerization takes 0.0 min
+		Polymerization takes 0.1 min
 	n_polymer 48 added on iteration no 55 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -27661,7 +27661,7 @@
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
 		6 monomers after MC step 1001
-		Polymerization takes 0.3 min
+		Polymerization takes 0.4 min
 	n_polymer 49 added on iteration no 56 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -28483,7 +28483,7 @@
 		7 monomers after MC step 997
 		7 monomers after MC step 999
 		7 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 50 added on iteration no 57 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -31307,7 +31307,7 @@
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
 		6 monomers after MC step 1001
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	Polymer addition rejected
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -32622,7 +32622,7 @@
 		6 monomers after MC step 998
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 55 added on iteration no 67 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -32875,7 +32875,7 @@
 		5 monomers after MC step 254
 		5 monomers after MC step 255
 		6 monomers after MC step 256
-		Polymerization takes 0.0 min
+		Polymerization takes 0.1 min
 	n_polymer 56 added on iteration no 68 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -33807,7 +33807,7 @@
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
 		6 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 57 added on iteration no 69 
 		2 monomers after MC step 2
 		3 monomers after MC step 3
@@ -34630,7 +34630,7 @@
 		6 monomers after MC step 997
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 58 added on iteration no 70 
 		2 monomers after MC step 1
 		3 monomers after MC step 3
@@ -35364,7 +35364,7 @@
 		5 monomers after MC step 998
 		5 monomers after MC step 999
 		5 monomers after MC step 1001
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	n_polymer 59 added on iteration no 71 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -35671,7 +35671,7 @@
 		11 monomers after MC step 332
 		11 monomers after MC step 334
 		11 monomers after MC step 335
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	n_polymer 61 added on iteration no 73 
 		2 monomers after MC step 1
 		3 monomers after MC step 3
@@ -36552,7 +36552,7 @@
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
 		6 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 63 added on iteration no 75 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -37384,7 +37384,7 @@
 		4 monomers after MC step 999
 		4 monomers after MC step 1000
 		4 monomers after MC step 1001
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	n_polymer 64 added on iteration no 76 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -38316,7 +38316,7 @@
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
 		6 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 65 added on iteration no 77 
 		2 monomers after MC step 2
 		3 monomers after MC step 3
@@ -38517,7 +38517,7 @@
 		6 monomers after MC step 210
 		6 monomers after MC step 211
 		6 monomers after MC step 214
-		Polymerization takes 0.0 min
+		Polymerization takes 0.1 min
 	n_polymer 66 added on iteration no 78 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -39438,7 +39438,7 @@
 		6 monomers after MC step 998
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 67 added on iteration no 79 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -41225,7 +41225,7 @@
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
 		6 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 69 added on iteration no 81 
 		2 monomers after MC step 2
 		3 monomers after MC step 4
@@ -41912,7 +41912,7 @@
 		7 monomers after MC step 997
 		7 monomers after MC step 999
 		7 monomers after MC step 1000
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 70 added on iteration no 82 
 		2 monomers after MC step 2
 		3 monomers after MC step 4
@@ -42913,7 +42913,7 @@
 		6 monomers after MC step 999
 		6 monomers after MC step 1000
 		6 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 71 added on iteration no 83 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -44304,7 +44304,7 @@
 		4 monomers after MC step 995
 		4 monomers after MC step 997
 		4 monomers after MC step 998
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	n_polymer 75 added on iteration no 87 
 		2 monomers after MC step 1
 		3 monomers after MC step 3
@@ -47220,7 +47220,7 @@
 		7 monomers after MC step 448
 		7 monomers after MC step 449
 		7 monomers after MC step 450
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	n_polymer 79 added on iteration no 91 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -48045,7 +48045,7 @@
 		4 monomers after MC step 999
 		4 monomers after MC step 1000
 		4 monomers after MC step 1001
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	n_polymer 80 added on iteration no 92 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -48720,7 +48720,7 @@
 		5 monomers after MC step 998
 		5 monomers after MC step 999
 		5 monomers after MC step 1001
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	n_polymer 81 added on iteration no 93 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -49446,7 +49446,7 @@
 		4 monomers after MC step 997
 		4 monomers after MC step 998
 		4 monomers after MC step 999
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	n_polymer 83 added on iteration no 95 
 		2 monomers after MC step 2
 		3 monomers after MC step 3
@@ -51024,7 +51024,7 @@
 		5 monomers after MC step 997
 		5 monomers after MC step 999
 		5 monomers after MC step 1000
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 88 added on iteration no 100 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -52645,7 +52645,7 @@
 		4 monomers after MC step 998
 		4 monomers after MC step 999
 		4 monomers after MC step 1000
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	n_polymer 90 added on iteration no 102 
 		2 monomers after MC step 2
 		3 monomers after MC step 3
@@ -53924,7 +53924,7 @@
 		6 monomers after MC step 998
 		6 monomers after MC step 999
 		6 monomers after MC step 1001
-		Polymerization takes 0.2 min
+		Polymerization takes 0.3 min
 	n_polymer 93 added on iteration no 105 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -54609,7 +54609,7 @@
 		4 monomers after MC step 999
 		4 monomers after MC step 1000
 		4 monomers after MC step 1001
-		Polymerization takes 0.1 min
+		Polymerization takes 0.2 min
 	n_polymer 94 added on iteration no 106 
 		2 monomers after MC step 1
 		3 monomers after MC step 2
@@ -55949,3 +55949,218 @@
 		5 monomers after MC step 809
 		5 monomers after MC step 810
 		5 monomers after MC step 811
+		5 monomers after MC step 812
+		5 monomers after MC step 813
+		5 monomers after MC step 814
+		5 monomers after MC step 816
+		5 monomers after MC step 817
+		5 monomers after MC step 818
+		5 monomers after MC step 819
+		5 monomers after MC step 820
+		5 monomers after MC step 821
+		5 monomers after MC step 822
+		5 monomers after MC step 824
+		5 monomers after MC step 825
+		5 monomers after MC step 826
+		5 monomers after MC step 827
+		5 monomers after MC step 828
+		5 monomers after MC step 830
+		5 monomers after MC step 831
+		5 monomers after MC step 833
+		5 monomers after MC step 834
+		5 monomers after MC step 835
+		5 monomers after MC step 836
+		5 monomers after MC step 838
+		5 monomers after MC step 839
+		5 monomers after MC step 840
+		5 monomers after MC step 841
+		5 monomers after MC step 842
+		5 monomers after MC step 843
+		5 monomers after MC step 845
+		5 monomers after MC step 846
+		5 monomers after MC step 847
+		5 monomers after MC step 848
+		5 monomers after MC step 849
+		5 monomers after MC step 850
+		5 monomers after MC step 851
+		5 monomers after MC step 853
+		5 monomers after MC step 854
+		5 monomers after MC step 855
+		5 monomers after MC step 856
+		5 monomers after MC step 857
+		5 monomers after MC step 859
+		5 monomers after MC step 860
+		5 monomers after MC step 861
+		5 monomers after MC step 862
+		5 monomers after MC step 863
+		5 monomers after MC step 864
+		5 monomers after MC step 867
+		5 monomers after MC step 868
+		5 monomers after MC step 869
+		5 monomers after MC step 870
+		5 monomers after MC step 871
+		5 monomers after MC step 872
+		5 monomers after MC step 873
+		5 monomers after MC step 874
+		5 monomers after MC step 875
+		5 monomers after MC step 876
+		5 monomers after MC step 877
+		5 monomers after MC step 878
+		5 monomers after MC step 879
+		5 monomers after MC step 880
+		5 monomers after MC step 881
+		5 monomers after MC step 882
+		5 monomers after MC step 884
+		5 monomers after MC step 885
+		5 monomers after MC step 886
+		5 monomers after MC step 887
+		5 monomers after MC step 889
+		5 monomers after MC step 890
+		5 monomers after MC step 891
+		5 monomers after MC step 892
+		5 monomers after MC step 893
+		5 monomers after MC step 894
+		5 monomers after MC step 896
+		5 monomers after MC step 898
+		5 monomers after MC step 899
+		5 monomers after MC step 900
+		5 monomers after MC step 901
+		5 monomers after MC step 902
+		5 monomers after MC step 903
+		5 monomers after MC step 904
+		5 monomers after MC step 905
+		5 monomers after MC step 907
+		5 monomers after MC step 908
+		5 monomers after MC step 912
+		5 monomers after MC step 913
+		5 monomers after MC step 915
+		5 monomers after MC step 917
+		5 monomers after MC step 918
+		5 monomers after MC step 919
+		5 monomers after MC step 920
+		5 monomers after MC step 921
+		5 monomers after MC step 922
+		5 monomers after MC step 923
+		5 monomers after MC step 924
+		5 monomers after MC step 925
+		5 monomers after MC step 926
+		5 monomers after MC step 927
+		5 monomers after MC step 928
+		5 monomers after MC step 929
+		5 monomers after MC step 930
+		5 monomers after MC step 932
+		5 monomers after MC step 933
+		5 monomers after MC step 934
+		5 monomers after MC step 936
+		5 monomers after MC step 937
+		5 monomers after MC step 938
+		5 monomers after MC step 940
+		5 monomers after MC step 941
+		5 monomers after MC step 943
+		5 monomers after MC step 944
+		5 monomers after MC step 945
+		5 monomers after MC step 946
+		5 monomers after MC step 947
+		5 monomers after MC step 948
+		5 monomers after MC step 949
+		5 monomers after MC step 950
+		5 monomers after MC step 951
+		5 monomers after MC step 952
+		5 monomers after MC step 953
+		5 monomers after MC step 954
+		5 monomers after MC step 955
+		5 monomers after MC step 956
+		5 monomers after MC step 958
+		5 monomers after MC step 959
+		5 monomers after MC step 960
+		5 monomers after MC step 961
+		5 monomers after MC step 962
+		5 monomers after MC step 963
+		5 monomers after MC step 964
+		5 monomers after MC step 965
+		5 monomers after MC step 967
+		5 monomers after MC step 968
+		5 monomers after MC step 969
+		5 monomers after MC step 972
+		5 monomers after MC step 973
+		5 monomers after MC step 974
+		5 monomers after MC step 975
+		5 monomers after MC step 977
+		5 monomers after MC step 978
+		5 monomers after MC step 979
+		5 monomers after MC step 982
+		5 monomers after MC step 983
+		5 monomers after MC step 984
+		5 monomers after MC step 985
+		5 monomers after MC step 986
+		5 monomers after MC step 987
+		5 monomers after MC step 988
+		5 monomers after MC step 990
+		5 monomers after MC step 991
+		5 monomers after MC step 992
+		5 monomers after MC step 993
+		5 monomers after MC step 994
+		5 monomers after MC step 995
+		5 monomers after MC step 996
+		5 monomers after MC step 997
+		5 monomers after MC step 998
+		5 monomers after MC step 999
+		5 monomers after MC step 1001
+		Polymerization takes 0.2 min
+	n_polymer 97 added on iteration no 109 
+		2 monomers after MC step 1
+		3 monomers after MC step 2
+		4 monomers after MC step 3
+		Polymerization takes 0.0 min
+	n_polymer 98 added on iteration no 110 
+		2 monomers after MC step 1
+		3 monomers after MC step 2
+		4 monomers after MC step 3
+		Polymerization takes 0.0 min
+	n_polymer 99 added on iteration no 111 
+		2 monomers after MC step 1
+		3 monomers after MC step 2
+		3 monomers after MC step 3
+		3 monomers after MC step 4
+		3 monomers after MC step 5
+		3 monomers after MC step 6
+		4 monomers after MC step 7
+		5 monomers after MC step 8
+		6 monomers after MC step 9
+		Polymerization takes 0.0 min
+	n_polymer 100 added on iteration no 112 
+Runtime for creating all polymers : 19.08 minutes 
+Target values:
+{   '4-O-5': 0.0,
+    '5-5': 0.0,
+    'G': 0.46,
+    'H': 0.04,
+    'MW': 1240.0,
+    'MW_weighted': 2310.0,
+    'S': 0.5,
+    'alpha-O-4': 0.0,
+    'beta-1': 0.0,
+    'beta-5': 0.15,
+    'beta-O-4': 0.68,
+    'beta-beta': 0.17,
+    'branching_coeff': 0.0}
+Optimal simulated values:
+{   '4-O-5': 0.0,
+    '5-5': 0.0,
+    'G': 0.47530864197530864,
+    'H': 0.040123456790123455,
+    'MW': 1238.9980990099011,
+    'MW_weighted': 1328.6685244774267,
+    'S': 0.4845679012345679,
+    'alpha-O-4': 0.0,
+    'beta-1': 0.0,
+    'beta-5': 0.12248628884826325,
+    'beta-O-4': 0.7458866544789763,
+    'beta-beta': 0.1316270566727605,
+    'branching_coeff': 0.0,
+    'monomer_count': 6.415841584158416}
+
+Acceptance Rates:
+Monomer Acceptance: 0.01020652141426821
+Polymer Acceptance: 0.9017857142857143
+Runtime for analyzing the results : 0.03 minutes 
