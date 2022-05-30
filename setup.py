@@ -18,7 +18,7 @@ with open(os.path.join(root_dir, "README.rst"), "r") as fh:
 
 setuptools.setup(
     name="ligning", 
-    version="0.0.1",
+    version="0.1.0",
     author="Vlachos Research Group",
     author_email="vlachos@udel.edu",
     description="Accelerated Lignin Structure Generation with Graph-based Multiscale Modeling ",
