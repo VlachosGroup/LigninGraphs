@@ -59,7 +59,7 @@ Getting Started
 
 1. Install using pip (see documentation for full instructions)::
 
-    pip install ligningraphs
+    pip install ligning
 
 2. Run the unit tests.
 

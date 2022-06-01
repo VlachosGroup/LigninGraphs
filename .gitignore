@@ -7,3 +7,5 @@ ligning.egg-info/requires.txt
 ligning.egg-info/SOURCES.txt
 ligning.egg-info/top_level.txt
 ligning/__pycache__/__init__.cpython-37.pyc
+dist/ligning-0.1.1.tar.gz
+dist/ligning-0.1.1-py3-none-any.whl
