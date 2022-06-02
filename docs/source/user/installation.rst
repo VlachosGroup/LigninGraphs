@@ -11,13 +11,13 @@ applications. It is supported on Linux, Windows and Mac OS X.
 
 Installing LigninGraphs using pip
 ---------------------------------
-Using `pip` is the most straightforward way to install LigninGraphs.
+Using `pip` is the most straightforward way to install LigninGraphs (See details at https://pypi.org/project/ligning/).
 
 Install LigninGraphs by typing the following in the command prompt (the fresh installation takes ~1-2 minutes):
    
 .. code-block::
 
-    pip install ligningraphs
+    pip install ligning
 
 
 Installing LigninGraphs from source
@@ -36,7 +36,7 @@ To upgrade to a newer release, use the --upgrade flag:
 
 .. code-block::
 
-    pip install --upgrade ligningraphs
+    pip install --upgrade ligning
 
 
 .. _`Download Anaconda here`: https://www.anaconda.com/distribution/#download-section
