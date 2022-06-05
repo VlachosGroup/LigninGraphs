@@ -17,8 +17,10 @@ It can be used to generate feasible lignin strutcures to match experimental or l
 Documentation
 -------------
 
-See our `documentation page`_ for examples, equations used, and docstrings.
-
+See our `documentation page`_ for examples, equations used, and docstrings. Examples notebooks can be opened directly in Google Colab.
+.. image:: https://colab.research.google.com/assets/colab-badge.svg
+   :alt: Open In Colab
+   :target: https://colab.research.google.com/github//VlachosGroup/LigninGraphs/blob/master/docs/source/examples
 
 Developers
 ----------
