@@ -2,6 +2,8 @@
 LigninGraphs
 ==============
  
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/VlachosGroup/LigninGraphs/tree/master/docs/source/examples)
+
 
 LigninGraphs is an open-source software package in Python to generate feasible lignin structures. 
 
