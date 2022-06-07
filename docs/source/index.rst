@@ -23,6 +23,7 @@ Welcome to LigninGraphs's documentation!
    user/polymerization
    user/characterization
    user/optimization
+   user/hyperparameters
    user/examples
 
 .. toctree::
