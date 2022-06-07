@@ -52,10 +52,11 @@ Branching propensity
 Determine the branching probability for newly added monomers. 
 The value should be similar to the experimental branching coefficient.
 
-Hyperparameters can be passed into :code:`optimization.Simulation`` class.
+Hyperparameters can be passed into :code:`optimization.Simulation` class.
 Code example to define all the hyperparameters: 
 
 .. code-block::
+
     # set Metropolis temperatures
     Tmetro = 10
     Tmetro_out = 10
