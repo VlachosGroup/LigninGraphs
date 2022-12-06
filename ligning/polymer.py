@@ -255,6 +255,27 @@ class PolymerGraph():
                 linkage_new_index_O_C2 = (O_index_in_polymer, C2_index_in_polymer)
                 linkage_new_index_list = [linkage_new_index_C1_O, linkage_new_index_O_C2]
             
+            # beta-O-4 linkage, add -OH onto the alpha(7th) carbon
+            if linkage_new_name == 'beta-O-4':
+                print('v2 entry point')
+                if linkage_new[0] == 4: # C1 is the 4th carbon, C2 is the beta 8th carbon
+                    alpha2_index_in_polymer = C2_index_in_polymer - 1
+
+                if linkage_new[1] == 4: #C2 is the 4th carbon, C1 is the beta 8th carbon
+                    alpha2_index_in_polymer = C1_index_in_polymer - 1
+
+                # Extract the bonding C7 node 
+                alpha2_node = self.G.nodes[alpha2_index_in_polymer]
+                O_3_index = 16 # assign a new index 
+                O_index_in_polymer = len(self.G) # index to -OH that needs to be added at alpha(7th) of the first monomer
+
+                # Add the new -OH group to alpha(7th) carbon in the new monomer unit
+                self.G.add_node(O_index_in_polymer, element = 'O', aromatic = False, group = '7OH', index = O_3_index, \
+                    mtype = alpha2_node['mtype'], bonding = False, color = alpha2_node['color'], mi=alpha2_node['mi'])
+                linkage_new_index_alpha2_O = (alpha2_index_in_polymer, O_index_in_polymer)
+                linkage_new_index_list.append(linkage_new_index_alpha2_O)
+
+            
             # beta-5 linkage, connect beta(8th)-5 and O-alpha
             if linkage_new_name == 'beta-5':
                 
