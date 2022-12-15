@@ -235,6 +235,14 @@ class Trajectory():
                                                               linkage_type=linkage_new,
                                                               branching_state=branching_state)
 
+            # Add 5-5-ring and an extra monomer 
+            if new_linkage_flag and (linkage_new == '5-5') and (self.branching_propensity > 0.0):
+                random_state = ut.set_random_state(rseed+1)
+                monomer_new = ut.generate_random_monomer(
+                        self.monomer_distribution, random_state)
+                new_linkage_flag = polymer_i.add_specific_monomer(monomer_type=monomer_new,
+                                                                linkage_type=linkage_new,
+                                                                branching_state=True)
             if new_linkage_flag:
 
                 metrics_P, monomer_count_P, MW_P = ch.get_metrics_polymer(polymer,
