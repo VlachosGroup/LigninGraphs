@@ -34,14 +34,14 @@ ut.draw_atomic_graph(polymer_h.G)
 
 dimer_mol = ut.graph_to_mol(polymer_h.G)
 
-# Try adding an extra monomer, the branding state needs to be False, this step will not succeed    
-is_formed = polymer_h.add_specific_monomer('S', '5-5', False)
+# Add 5-5 ring with an extra monomer, the branding state needs to be True        
+is_formed = polymer_h.add_specific_monomer('S', '5-5', True)
 ut.draw_atomic_graph(polymer_h.G)
 ut.draw_big_graph(polymer_h.bigG) 
 trimer_mol = ut.graph_to_mol(polymer_h.G)
 
 # add one more beta-O-4
-is_formed = polymer_h.add_specific_monomer('H', 'beta-O-4')
+is_formed = polymer_h.add_specific_monomer('H', 'beta-O-4', True)
 ut.draw_atomic_graph(polymer_h.G)
 ut.draw_big_graph(polymer_h.bigG) 
 tetramer_mol = ut.graph_to_mol(polymer_h.G)
