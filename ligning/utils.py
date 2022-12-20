@@ -19,6 +19,7 @@ from pysmiles import write_smiles, read_smiles, fill_valence
 from rdkit import Chem
 from scipy import stats 
 from scipy.stats import norm
+from scipy.stats import beta
 
 from ligning.rules import monomer_types, monomer_select_C1_C2, linkage_names, CHO, weight_CHO
 
@@ -566,6 +567,20 @@ def generate_random_size_from_distribution(
         (lower - mu) / sigma, (upper - mu) / sigma, loc=mu, scale=sigma)
     
     size = dist.rvs(1, random_state=random_state) 
+
+    return size
+
+def generate_random_size_from_beta_distribution(
+    random_state: Optional[RandomState] = None
+) -> float:
+    if random_state is None:
+            random_state = np.random
+    size_in_MW = True
+    # if size_in_MW:
+    #     min_size = 145
+    #     max_size =  26000
+    a, b = 2, 7.5
+    size = 108900 * beta.rvs(a, b, size=1000, random_state=random_state)
 
     return size
 

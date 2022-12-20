@@ -46,6 +46,7 @@ class Trajectory():
             expected_size: Tuple[int, float],
             max_size: Tuple[int, float],
             distribution_scaling: Optional[float] = 1.0,
+            use_beta_distribution: Optional[bool] = False,
             additional_metrics: Optional[Tuple[list, float]] = None,
             size_in_MW: Optional[bool] = False,
             branching_propensity: Optional[float] = None,
@@ -89,6 +90,7 @@ class Trajectory():
         self.expected_size = expected_size
         self.max_size = max_size
         self.distribution_scaling = distribution_scaling
+        self.use_beta_distribution = use_beta_distribution
         self.additional_metrics = None
         self.additional = False  # flag for addditional metrics
         self.metrics_weights = metrics_weights  # an array of metrics weights
@@ -129,6 +131,10 @@ class Trajectory():
         # if output file path is provided
         self.file = file
 
+        # Use beta distribution, size_in_MW is always true in this case
+        if self.use_beta_distribution:
+            self.size_in_MW = True
+
     def run_MCMC(
         self,
         rseed: int,
@@ -162,10 +168,15 @@ class Trajectory():
         #     self.file.write("\tCreating a new polymer:\n")
 
         # Select one random size as the stopping criteria
-        self.stop_size = ut.generate_random_size_from_distribution(self.expected_size,
-                                                                   self.max_size,
-                                                                   distribution_scaling=self.distribution_scaling,
-                                                                   size_in_MW=self.size_in_MW)
+        if self.use_beta_distribution:
+            self.stop_size = ut.generate_random_size_from_beta_distribution(
+                random_state=random_state)
+        else:
+            self.stop_size = ut.generate_random_size_from_distribution(self.expected_size,
+                                                                       self.max_size,
+                                                                       distribution_scaling=self.distribution_scaling,
+                                                                       size_in_MW=self.size_in_MW,
+                                                                       random_state=random_state)
 
         # set the branching state
         branching_state = None  # no input, no restrictions
@@ -235,14 +246,14 @@ class Trajectory():
                                                               linkage_type=linkage_new,
                                                               branching_state=branching_state)
 
-            # Add 5-5-ring and an extra monomer 
+            # Add 5-5-ring and an extra monomer
             if new_linkage_flag and (linkage_new == '5-5') and (self.branching_propensity > 0.0):
                 random_state = ut.set_random_state(rseed+1)
                 monomer_new = ut.generate_random_monomer(
-                        self.monomer_distribution, random_state)
+                    self.monomer_distribution, random_state)
                 new_linkage_flag = polymer_i.add_specific_monomer(monomer_type=monomer_new,
-                                                                linkage_type=linkage_new,
-                                                                branching_state=True)
+                                                                  linkage_type=linkage_new,
+                                                                  branching_state=True)
             if new_linkage_flag:
 
                 metrics_P, monomer_count_P, MW_P = ch.get_metrics_polymer(polymer,
@@ -445,6 +456,7 @@ class Simulation(Trajectory):
                  verbose: Optional[bool] = True,
                  show_plots: Optional[bool] = True,
                  form_rings: Optional[bool] = False,
+                 use_beta_distribution: Optional[bool] = False,
                  save_path: Optional[str] = os.getcwd()):
         """Initialize the simulation parameters
 
@@ -505,6 +517,7 @@ class Simulation(Trajectory):
                          expected_size,
                          max_size,
                          distribution_scaling,
+                         use_beta_distribution,
                          additional_metrics,
                          size_in_MW,
                          branching_propensity,
@@ -559,6 +572,7 @@ class Simulation(Trajectory):
         self.trial_index = trial_index
         self.show_plots = show_plots
         self.form_rings = form_rings
+        self.use_beta_distribution = use_beta_distribution
 
         # estimate the maximum MW for scaling purposes
         if self.size_in_MW:
@@ -605,6 +619,7 @@ class Simulation(Trajectory):
                           expected_size=self.expected_size,
                           max_size=self.max_size,
                           distribution_scaling=self.distribution_scaling,
+                          use_beta_distribution=self.use_beta_distribution,
                           size_in_MW=self.size_in_MW,
                           additional_metrics=self.additional_metrics,
                           branching_propensity=self.branching_propensity,
