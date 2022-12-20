@@ -45,3 +45,10 @@ is_formed = polymer_h.add_specific_monomer('H', 'beta-O-4', True)
 ut.draw_atomic_graph(polymer_h.G)
 ut.draw_big_graph(polymer_h.bigG) 
 tetramer_mol = ut.graph_to_mol(polymer_h.G)
+
+# add one more beta-O-4
+is_formed = polymer_h.add_specific_monomer('H', 'beta-O-4', True)
+ut.draw_atomic_graph(polymer_h.G)
+ut.draw_big_graph(polymer_h.bigG) 
+x_mol = ut.graph_to_mol(polymer_h.G)
+#[0, 6, 7, 11, 14, 17, 18, 24, 33, 39, 42, 43, 48, 51, 54, 55, 60]

@@ -106,7 +106,7 @@ def monomer_graph(
     
     # Add O attached to 4C (index = 10) - bonding OH group
     O_1_index = n_c + 1
-    G.add_node(O_1_index -1, element = 'O', aromatic = False, group = '4OH', index = O_1_index, mtype = monomer_type, bonding = True, color = color, mi=monomer_index)
+    G.add_node(O_1_index -1, element = 'O', aromatic = False, group = '4OH', index = O_1_index, mtype = monomer_type, bonding = False, color = color, mi=monomer_index)
     
     # Add O attached to 9C (index = 11) - nonbonding OH group
     O_2_index = 11

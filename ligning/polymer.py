@@ -52,7 +52,7 @@ class PolymerGraph():
         """
         # check which nodes have "bonding" == True
         C1_indices_in_polymer = [
-            n for n, v in self.G.nodes(data=True) if v['bonding']]
+            n for n, v in self.G.nodes(data=True) if (v['bonding'] and v['element'] == 'C')]
 
         if branching_state is not None:
             C1_indices_in_polymer = self.update_branching_C_in_polymer(
