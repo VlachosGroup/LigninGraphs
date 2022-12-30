@@ -34,21 +34,28 @@ ut.draw_atomic_graph(polymer_h.G)
 
 dimer_mol = ut.graph_to_mol(polymer_h.G)
 
-# Add 5-5 ring with an extra monomer, the branding state needs to be True        
+# Add 5-5 ring with an extra monomer, the branding state needs to be True   
+print(polymer_h.O_pair_indices_in_polymer)     
 is_formed = polymer_h.add_specific_monomer('S', '5-5', True)
 ut.draw_atomic_graph(polymer_h.G)
 ut.draw_big_graph(polymer_h.bigG) 
 trimer_mol = ut.graph_to_mol(polymer_h.G)
+trimer_G = polymer_h.G.copy()
+C1_available = polymer_h.find_available_C1_in_polymer()
+print(C1_available)
+# [0, 3, 6, 7, 11, 14, 17, 18]
 
 # add one more beta-O-4
 is_formed = polymer_h.add_specific_monomer('H', 'beta-O-4', True)
 ut.draw_atomic_graph(polymer_h.G)
 ut.draw_big_graph(polymer_h.bigG) 
 tetramer_mol = ut.graph_to_mol(polymer_h.G)
+tetramer_G = polymer_h.G.copy()
+C1_available = polymer_h.find_available_C1_in_polymer()
+print(C1_available)
 
 # add one more beta-O-4
 is_formed = polymer_h.add_specific_monomer('H', 'beta-O-4', True)
 ut.draw_atomic_graph(polymer_h.G)
 ut.draw_big_graph(polymer_h.bigG) 
 x_mol = ut.graph_to_mol(polymer_h.G)
-#[0, 6, 7, 11, 14, 17, 18, 24, 33, 39, 42, 43, 48, 51, 54, 55, 60]

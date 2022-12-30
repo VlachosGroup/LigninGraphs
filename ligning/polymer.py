@@ -231,10 +231,17 @@ class PolymerGraph():
                               mtype=linkage_new_types_2, btype=linkage_new_name)
 
         # change the bonding availablity
-        self.G = ut.make_unavailable(self.G, O1_index_in_polymer)
-        self.G = ut.make_unavailable(self.G, O2_index_in_polymer)
+        # make both 4th and 5th C unavailable in the polymer
+        self.G = ut.make_unavailable(self.G, O1_index_in_polymer-5)
+        self.G = ut.make_unavailable(self.G, O2_index_in_polymer-5)
+        self.G = ut.make_unavailable(self.G, O1_index_in_polymer-6)
+        self.G = ut.make_unavailable(self.G, O2_index_in_polymer-6)
+        # make the C1, C2 unavailable in the coming monomer
         self.G = ut.make_unavailable(self.G, C1_index_in_polymer)
         self.G = ut.make_unavailable(self.G, C2_index_in_polymer)
+        # # 
+        # self.G = ut.make_unavailable(self.G, O1_index_in_polymer)
+        # self.G = ut.make_unavailable(self.G, O2_index_in_polymer)
 
         # print out the progress
         if self.verbose:
@@ -932,7 +939,8 @@ class Polymer(PolymerGraph):
                 # Try adding the monomer, linkage into the graph
                 new_linkage_flag = self.try_adding_new(linkage_index, C1_index_in_polymer, C2_index_in_polymer,
                                                        monomer_new=monomer_new, draw=draw)
-
+        print(C1_index_in_polymer)
+        print(C2_index_in_polymer)
         return new_linkage_flag
 
     def add_random_monomer(
