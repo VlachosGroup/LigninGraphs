@@ -59,6 +59,21 @@ class PolymerGraph():
                 C1_indices_in_polymer, branching_state)
 
         return C1_indices_in_polymer
+    
+    def find_available_O_pairs_indicies_in_polymer(self):
+
+        C_pair_indices_in_polymer = [ei for ei in self.G.edges if self.G.edges[ei]['btype'] == '5-5']
+        C1_indices_in_polymer = self.find_available_C1_in_polymer()
+        O_pair_indices_in_polymer = []
+        # Check if the neighbor 4th Carbon of the 5th carbon is available
+        for C_pair_i_in_polymer in C_pair_indices_in_polymer:
+            C1_4th_in_polymer = C_pair_i_in_polymer[0]-1
+            C2_4th_in_polymer = C_pair_i_in_polymer[1]-1
+            if (C1_4th_in_polymer in C1_indices_in_polymer) and (C2_4th_in_polymer in C1_indices_in_polymer):
+                # Adjust the index of O by adding 5 to the 5th Carbon index
+                O_pair_indices_in_polymer.append((C_pair_i_in_polymer[0]+5, C_pair_i_in_polymer[1]+5))
+
+        return O_pair_indices_in_polymer
 
     def update_available_C1_in_polymer(self, C1_index_in_polymer: int) -> list:
         """update available C1 node in a polymer by delete C1_index_in_polymer from the list
@@ -229,6 +244,10 @@ class PolymerGraph():
                               mtype=linkage_new_types_1, btype=linkage_new_name)
         self.G.add_edges_from([linkage_new_index_2], order=1, index=linkage_new_2,
                               mtype=linkage_new_types_2, btype=linkage_new_name)
+        
+        # Update the original 5-5 bond to the new linkage name
+        if (O1_index_in_polymer-5, O2_index_in_polymer-5) in self.G.edges:
+            self.G.edges[(O1_index_in_polymer-5, O2_index_in_polymer-5)]['btype'] = linkage_new_name
 
         # change the bonding availablity
         # make both 4th and 5th C unavailable in the polymer
@@ -239,10 +258,7 @@ class PolymerGraph():
         # make the C1, C2 unavailable in the coming monomer
         self.G = ut.make_unavailable(self.G, C1_index_in_polymer)
         self.G = ut.make_unavailable(self.G, C2_index_in_polymer)
-        # # 
-        # self.G = ut.make_unavailable(self.G, O1_index_in_polymer)
-        # self.G = ut.make_unavailable(self.G, O2_index_in_polymer)
-
+        
         # print out the progress
         if self.verbose:
             print('Connect a {} to a {} unit (in polymer) via a {} bond'.format(
@@ -472,15 +488,6 @@ class PolymerGraph():
         if linkage_new_name == 'beta-1' and new_linkage_flag:
             self.G = ut.adjust_indices(self.G)
 
-        # For 5-5, record the indices -OH pair
-        if linkage_new_name == '5-5' and new_linkage_flag:
-            # the O is the 10th atom in the monomer graph, adjust the index from C (5th)
-            O_pair_indices_in_polymer_new = (
-                C1_index_in_polymer+5, C2_index_in_polymer+5)
-            self.O_pair_indices_in_polymer.append(
-                O_pair_indices_in_polymer_new)
-            # print(self.O_pair_indices_in_polymer)
-
         return new_linkage_flag
 
 
@@ -516,7 +523,7 @@ class Polymer(PolymerGraph):
         # else input is a polymer object
         else:
             self.mi = M_init.mi
-
+        
     def update_units_5_5(
         self,
         O_pair_indices: Tuple[int, int],
@@ -536,6 +543,8 @@ class Polymer(PolymerGraph):
             [(M1_index, M3_index)], btype=linkage_new_name)
         self.bigG.add_edges_from(
             [(M2_index, M3_index)], btype=linkage_new_name)
+        # update 5-5 to 5-5-ring
+        self.bigG.edges[(M1_index, M2_index)]['btype'] = linkage_new_name
 
     def update_units(
         self,
@@ -577,7 +586,6 @@ class Polymer(PolymerGraph):
         # Add the monomer into the graph
         # Here we create a temp PolymerGraph object to connect C1 and C2
         PG_temp = PolymerGraph(self.G.copy(), verbose=self.verbose)
-        PG_temp.O_pair_indices_in_polymer = self.O_pair_indices_in_polymer
 
         # join the monomer graph and polymer graph
         if monomer_new is not None:
@@ -597,11 +605,10 @@ class Polymer(PolymerGraph):
             # Update the polymer big graph
             if monomer_new is not None:
                 self.bigG = ut.join_two(self.bigG, monomer_new.bigG)
-            # print('check point 4.0')
-            # Remove the pair from the list after addition of a new monomer and a new linkage
-            PG_temp.O_pair_indices_in_polymer.remove(O_pair_indices)
-            self.O_pair_indices_in_polymer = PG_temp.O_pair_indices_in_polymer
-            # print(self.O_pair_indices_in_polymer)
+            # Update the avaible C1 list after addition of a new monomer and a new linkage
+            self.C1_indices_in_polymer = self.find_available_C1_in_polymer()
+            # Update the avaiable O pairs for 5-5
+            self.O_pair_indices_in_polymer = self.find_available_O_pairs_indicies_in_polymer()
             # Update the unit dictionary
             self.update_units_5_5(
                 O_pair_indices, C1_index_in_polymer, C2_index_in_polymer)
@@ -646,7 +653,7 @@ class Polymer(PolymerGraph):
         # Add the monomer into the graph
         # Here we create a temp PolymerGraph object to connect C1 and C2
         PG_temp = PolymerGraph(self.G.copy(), verbose=self.verbose)
-        PG_temp.O_pair_indices_in_polymer = self.O_pair_indices_in_polymer
+        # PG_temp.O_pair_indices_in_polymer = self.O_pair_indices_in_polymer
 
         # join the monomer graph and polymer graph
         if monomer_new is not None:
@@ -659,7 +666,6 @@ class Polymer(PolymerGraph):
 
         # If a new linakge does form
         if new_linkage_flag:
-            # print('check point 1.0')
             # Update the polymer graph
             self.G = PG_temp.G
             # Update the polymer big graph
@@ -668,8 +674,7 @@ class Polymer(PolymerGraph):
             # Update the avaible C1 list after addition of a new monomer and a new linkage
             self.C1_indices_in_polymer = self.find_available_C1_in_polymer()
             # Update the avaiable O pairs for 5-5
-            self.O_pair_indices_in_polymer = PG_temp.O_pair_indices_in_polymer
-            # print(self.O_pair_indices_in_polymer)
+            self.O_pair_indices_in_polymer = self.find_available_O_pairs_indicies_in_polymer()
             # Update the unit dictionary
             self.update_units(
                 linkage_index, C1_index_in_polymer, C2_index_in_polymer)
@@ -720,6 +725,8 @@ class Polymer(PolymerGraph):
             raise Exception("Input linkage type is not defined")
 
         # Add 5-5-ring if branching state is true
+        self.O_pair_indices_in_polymer = self.find_available_O_pairs_indicies_in_polymer()
+
         if (linkage_type == '5-5') and (len(self.O_pair_indices_in_polymer)) > 0 and branching_state:
             monomer_types_possible = monomer_types
             if monomer_type == None:
@@ -808,11 +815,8 @@ class Polymer(PolymerGraph):
                 C2_index_in_monomer)
 
             # Try adding the monomer, linkage into the graph
-            # print('check point 0.0')
             new_linkage_flag = self.try_adding_new(linkage_index, C1_index_in_polymer, C2_index_in_polymer,
                                                    monomer_new=monomer_new, draw=draw)
-            # print('check point 2.0')
-            # print(self.O_pair_indices_in_polymer)
 
         return new_linkage_flag
 
@@ -845,8 +849,8 @@ class Polymer(PolymerGraph):
         Gm = monomer_new.create()
 
         # Add 5-5-ring if branching state is true
-        if (linkage_type == '5-5') and (len(self.O_pair_indices_in_polymer) > 0) and branching_state:
-            # Find possible C1 C2 pairs available for bonding
+        self.O_pair_indices_in_polymer = self.find_available_O_pairs_indicies_in_polymer()
+        if (linkage_type == '5-5-ring') and (len(self.O_pair_indices_in_polymer) > 0) and branching_state:
             C1_C2_pairs_indices_in_monomer = [(7, 8), (8, 7)]
             C1_C2_pair_indices_in_monomer = ut.select_one_from_many(
                 C1_C2_pairs_indices_in_monomer)
@@ -939,8 +943,8 @@ class Polymer(PolymerGraph):
                 # Try adding the monomer, linkage into the graph
                 new_linkage_flag = self.try_adding_new(linkage_index, C1_index_in_polymer, C2_index_in_polymer,
                                                        monomer_new=monomer_new, draw=draw)
-        print(C1_index_in_polymer)
-        print(C2_index_in_polymer)
+        # print(C1_index_in_polymer)
+        # print(C2_index_in_polymer)
         return new_linkage_flag
 
     def add_random_monomer(

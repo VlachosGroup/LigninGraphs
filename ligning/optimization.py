@@ -224,11 +224,11 @@ class Trajectory():
         i_step = 0  # event indices
 
         while (current_size <= self.stop_size) and (i_step <= i_max):
-
+            
             # Annealing version: (1 - monomer_count_P/self.stop_size) * self.Tmetro
             Tmetro = self.Tmetro
-
             polymer_i = Polymer(polymer, verbose=False)  # self.verbose)
+            
             # update the branching state based on the branching propensity
             if self.branching_propensity is not None:
                 if self.branching_propensity > 0.0:  # randomly generate a branching state based on branching propensity
@@ -252,7 +252,7 @@ class Trajectory():
                 monomer_new = ut.generate_random_monomer(
                     self.monomer_distribution, random_state)
                 new_linkage_flag = polymer_i.add_specific_monomer(monomer_type=monomer_new,
-                                                                  linkage_type=linkage_new,
+                                                                  linkage_type='5-5-ring',
                                                                   branching_state=True)
             if new_linkage_flag:
 

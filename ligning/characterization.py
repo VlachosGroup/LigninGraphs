@@ -174,17 +174,23 @@ class CharacterizeGraph():
         """        
         bonds = [self.G.edges[ei]['btype'] for ei in list(self.G.edges)]
 
-        linkages_count = {}
-        for linkage_name_i in linkage_names:
-            linkages_count[linkage_name_i] = float(bonds.count(linkage_name_i)) #the bonds under the same name
+        linkages_count_with_5_5_ring = {}
+        linkage_names_with_5_5_ring = linkage_names + ['5-5-ring']
+        for linkage_name_i in linkage_names_with_5_5_ring:
+            linkages_count_with_5_5_ring[linkage_name_i] = float(bonds.count(linkage_name_i)) #the bonds under the same name
         
         # adjust for double counting
-        linkages_count['4-O-5'] = linkages_count['4-O-5'] /2
-        linkages_count['beta-O-4'] = linkages_count['beta-O-4'] /2
-        linkages_count['beta-5'] = linkages_count['beta-5'] /2
-        linkages_count['beta-beta'] = linkages_count['beta-beta'] /3
+        linkages_count_with_5_5_ring['4-O-5'] = linkages_count_with_5_5_ring['4-O-5'] /2
+        linkages_count_with_5_5_ring['beta-O-4'] = linkages_count_with_5_5_ring['beta-O-4'] /2
+        linkages_count_with_5_5_ring['beta-5'] = linkages_count_with_5_5_ring['beta-5'] /2
+        linkages_count_with_5_5_ring['beta-beta'] = linkages_count_with_5_5_ring['beta-beta'] /3
+        linkages_count_with_5_5_ring['5-5-ring'] = linkages_count_with_5_5_ring['5-5-ring'] /3
+        linkages_count_with_5_5_ring['5-5'] += linkages_count_with_5_5_ring['5-5-ring']
         
-        self.linkages_count = linkages_count
+
+        self.linkages_count = {}
+        for linkage_name_i in linkage_names:
+            self.linkages_count[linkage_name_i] = linkages_count_with_5_5_ring[linkage_name_i]
         
         return self.linkages_count
     
@@ -358,11 +364,16 @@ class Characterize(CharacterizeGraph):
         """     
         bonds = [self.bigG.edges[ei]['btype'] for ei in list(self.bigG.edges)]
 
-        linkages_count = {}
-        for linkage_name_i in linkage_names:
-            linkages_count[linkage_name_i] = bonds.count(linkage_name_i) #the bonds under the same name
+        linkages_count_with_5_5_ring = {}
+        linkage_names_with_5_5_ring = linkage_names + ['5-5-ring']
+        for linkage_name_i in linkage_names_with_5_5_ring:
+            linkages_count_with_5_5_ring[linkage_name_i] = bonds.count(linkage_name_i) #the bonds under the same name
+        linkages_count_with_5_5_ring['5-5-ring'] = linkages_count_with_5_5_ring['5-5-ring'] /3
+        linkages_count_with_5_5_ring['5-5'] += linkages_count_with_5_5_ring['5-5-ring']
         
-        self.linkages_count = linkages_count
+        self.linkages_count = {}
+        for linkage_name_i in linkage_names:
+            self.linkages_count[linkage_name_i] = linkages_count_with_5_5_ring[linkage_name_i]
         
         return self.linkages_count
 
