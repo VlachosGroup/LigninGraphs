@@ -580,7 +580,7 @@ def generate_random_size_from_beta_distribution(
     #     min_size = 145
     #     max_size =  26000
     a, b = 2, 7.5
-    size = 108900 * beta.rvs(a, b, size=1000, random_state=random_state)
+    size = 108900 * beta.rvs(a, b, random_state=random_state)
 
     return size
 
