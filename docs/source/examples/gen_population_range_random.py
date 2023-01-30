@@ -19,10 +19,10 @@ from rdkit.Chem.Descriptors import ExactMolWt
 output_path = os.path.join(os.getcwd(), 'demo_results', 'molecules')
 
 ResultsName='demo_results'
-library_name = 'gen_beta_random' #Update it here
+library_name = 'gen_beta_range'
 trial_index=0
 
-# 4-O-5, alpha-O-4, beta-O-4, 5-5, beta-5, beta-beta, beta-1, Update it here
+# 4-O-5, alpha-O-4, beta-O-4, 5-5, beta-5, beta-beta, beta-1
 # lift the 5-5 percentage 
 linkage_distribution_input = [7, 0, 75, 3, 7, 7, 0]
 
@@ -48,7 +48,7 @@ i_max_out = 1000
 i_max_ring = 500
 
 # total population size, Update it here
-n_population = 10
+n_population = 5000
 
 seed_init = 1
 
@@ -57,17 +57,28 @@ trial_index = 0
 # only 11 metrics in this case
 metrics_weights = [1, 1, 1, 1, 10, 10, 1, 1, 1, 1, 1]
 
+# upper and lower bound of the population size in MW, Update it here
+MW_lower, MW_upper = [300, 1000]
+library_name += '_MW_in_' + str(MW_lower) + '_' + str(MW_upper)
 
+# population in this range
+n_population_in_range = ut.generate_population_size_range_from_beta_distribution(MW_lower, 
+                                                                                 MW_upper, 
+                                                                                 n_population)
+
+#%%
 sim = opt.Simulation(linkage_distribution_input=linkage_distribution_input,
                      monomer_distribution_input=monomer_distribution_input,
-                     use_beta_distribution=True,
+                     use_uniform_distribution=True,
+                     max_size=MW_upper,
+                     min_size=MW_lower,
                      Tmetro=Tmetro,
                      Tmetro_out=Tmetro_out,
                      seed_init=seed_init,
                      ResultsName=ResultsName,
                      library_name=library_name,
                      trial_index=trial_index,
-                     n_population=n_population,
+                     n_population=n_population_in_range,
                      i_max=i_max,
                      i_max_out=i_max_out,
                      i_max_ring=i_max_ring,
@@ -92,9 +103,9 @@ import matplotlib.pyplot as plt
 
 fig, ax = plt.subplots(1, 1)
 
-a, b = 2, 7.5
-r = 108900 * beta.rvs(a, b, size=1000)
-ax.hist(r, bins=20, alpha=0.5, color='blue', label='reference',density=True)
+#a, b = 2, 7.5
+#r = 108900 * beta.rvs(a, b, size=1000)
+#ax.hist(r, bins=20, alpha=0.5, color='blue', label='reference',density=True)
 ax.hist(population_MWs, bins=20, alpha=0.5, color='red', label='actual',density=True)
 ax.legend(loc='best', frameon=False)
 plt.show()

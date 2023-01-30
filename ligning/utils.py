@@ -3,6 +3,7 @@ Utility functions
 
 Graph to smiles, mol conversion, visualization etc.
 """
+import random
 from typing import Optional, TypeVar, Union, Tuple, List
 import os 
 import pandas as pd
@@ -584,6 +585,32 @@ def generate_random_size_from_beta_distribution(
 
     return size
 
+def generate_random_size_from_uniform_distribution_range(
+    min_size: Tuple[int, float], 
+    max_size: Tuple[int, float], 
+    random_state: Optional[RandomState] = None
+)->float:
+    if random_state is None:
+            random_state = np.random
+    size_in_MW = True
+    stop_size = np.random.uniform(min_size, max_size)
+
+    return stop_size
+
+def generate_population_size_range_from_beta_distribution(
+    min_size: Tuple[int, float], 
+    max_size: Tuple[int, float],  
+    n_total_population: int,
+    random_state: Optional[RandomState] = None
+) -> int:
+    if random_state is None:
+            random_state = np.random
+    a, b = 2, 7.5
+    delta_prob = beta.cdf(max_size/108900, a, b) - beta.cdf(min_size/108900, a, b)
+    n_simulation = int(delta_prob * n_total_population)
+
+    return n_simulation
+    
 
 def plot_single_distribution(
     ypred_all: nparray, 

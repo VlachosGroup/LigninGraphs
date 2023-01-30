@@ -9,7 +9,7 @@ import os
 from scipy.stats import beta
 import matplotlib.pyplot as plt
 import numpy as np
-
+import random
 fig, ax = plt.subplots(1, 1)
 
 a, b = 2, 7.5
@@ -28,3 +28,4 @@ MW_lower, MW_upper = 300, 1000
 n_total_population = 10000
 delta_prob = beta.cdf(MW_upper/108900, a, b) - beta.cdf(MW_lower/108900, a, b)
 n_simulation = delta_prob * n_total_population
+stop_size = np.random.uniform(300, 1000, random_state=1)

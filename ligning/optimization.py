@@ -45,8 +45,10 @@ class Trajectory():
             Tmetro: int,
             expected_size: Optional[Tuple[int, float]] = None,
             max_size: Optional[Tuple[int, float]] = None,
+            min_size: Optional[Tuple[int, float]] = None,
             distribution_scaling: Optional[float] = 1.0,
             use_beta_distribution: Optional[bool] = False,
+            use_uniform_distribution: Optional[bool] = False,
             additional_metrics: Optional[Tuple[list, float]] = None,
             size_in_MW: Optional[bool] = False,
             branching_propensity: Optional[float] = None,
@@ -89,8 +91,10 @@ class Trajectory():
             monomer_distribution_input)/np.sum(monomer_distribution_input)
         self.expected_size = expected_size
         self.max_size = max_size
+        self.min_size = min_size
         self.distribution_scaling = distribution_scaling
         self.use_beta_distribution = use_beta_distribution
+        self.use_uniform_distribution = use_uniform_distribution
         self.additional_metrics = None
         self.additional = False  # flag for addditional metrics
         self.metrics_weights = metrics_weights  # an array of metrics weights
@@ -132,7 +136,7 @@ class Trajectory():
         self.file = file
 
         # Use beta distribution, size_in_MW is always true in this case
-        if self.use_beta_distribution:
+        if self.use_beta_distribution or self.use_uniform_distribution:
             self.size_in_MW = True
 
     def run_MCMC(
@@ -171,6 +175,12 @@ class Trajectory():
         if self.use_beta_distribution:
             self.stop_size = ut.generate_random_size_from_beta_distribution(
                 random_state=random_state)
+        if self.use_uniform_distribution:
+            self.stop_size = ut.generate_random_size_from_uniform_distribution_range(
+                self.min_size, 
+                self.max_size,
+                random_state=random_state)
+            print(self.stop_size)
         else:
             self.stop_size = ut.generate_random_size_from_distribution(self.expected_size,
                                                                        self.max_size,
@@ -439,6 +449,7 @@ class Simulation(Trajectory):
                  Tmetro_out: int,
                  expected_size: Optional[Tuple[int, float]] = None,
                  max_size: Optional[Tuple[int, float]] = None,
+                 min_size: Optional[Tuple[int, float]] = None,
                  distribution_scaling:Optional[float] = None,
                  seed_init: Optional[int] = 1,
                  library_name: Optional[str] = 'lignin_x',
@@ -457,6 +468,7 @@ class Simulation(Trajectory):
                  show_plots: Optional[bool] = True,
                  form_rings: Optional[bool] = False,
                  use_beta_distribution: Optional[bool] = False,
+                 use_uniform_distribution: Optional[bool] = False,
                  save_path: Optional[str] = os.getcwd()):
         """Initialize the simulation parameters
 
@@ -573,6 +585,8 @@ class Simulation(Trajectory):
         self.show_plots = show_plots
         self.form_rings = form_rings
         self.use_beta_distribution = use_beta_distribution
+        self.min_size = min_size
+        self.use_uniform_distribution = use_uniform_distribution
 
         # estimate the maximum MW for scaling purposes
         if self.size_in_MW:
@@ -618,8 +632,10 @@ class Simulation(Trajectory):
                           self.Tmetro,
                           expected_size=self.expected_size,
                           max_size=self.max_size,
+                          min_size=self.min_size,
                           distribution_scaling=self.distribution_scaling,
                           use_beta_distribution=self.use_beta_distribution,
+                          use_uniform_distribution=self.use_uniform_distribution,
                           size_in_MW=self.size_in_MW,
                           additional_metrics=self.additional_metrics,
                           branching_propensity=self.branching_propensity,
