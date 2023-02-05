@@ -66,6 +66,8 @@ metrics_weights = [1, 1, 1, 1, 10, 10, 1, 1, 1, 1, 1, 10, 10]
 
 sim = opt.Simulation(linkage_distribution_input=linkage_distribution_input,
                      monomer_distribution_input=monomer_distribution_input,
+                     use_beta_distribution=False,
+                     use_uniform_distribution=False,
                      expected_size=expected_size,
                      max_size=max_size,
                      distribution_scaling=distribution_scaling,
@@ -92,6 +94,8 @@ sim.run()
 P_population = sim.P_population
 population = ch.Population(P_population, name=library_name, ResultsName=ResultsName, TrialIndex=str(trial_index))
 population.analyze()
+#%%
+population_MWs = population.data['MW']
 
 #%%
 # see ut.graph_to_mol(P_population[5].G) for the 5-5

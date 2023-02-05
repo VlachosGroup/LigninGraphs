@@ -43,8 +43,8 @@ Tmetro = 5
 Tmetro_out = 5
 
 
-i_max = 10000
-i_max_out = 1000
+i_max = 2000
+i_max_out = 5000
 i_max_ring = 500
 
 # total population size, Update it here
@@ -56,11 +56,16 @@ trial_index = 0
 
 # only 11 metrics in this case
 metrics_weights = [1, 1, 1, 1, 10, 10, 1, 1, 1, 1, 1]
+MW_upper = 25100
+MW_lower = 300
+population_metrics =  [MW_upper, MW_upper]
 
 
 sim = opt.Simulation(linkage_distribution_input=linkage_distribution_input,
                      monomer_distribution_input=monomer_distribution_input,
                      use_beta_distribution=True,
+                     max_size=MW_upper,
+                     min_size=None,
                      Tmetro=Tmetro,
                      Tmetro_out=Tmetro_out,
                      seed_init=seed_init,
@@ -72,6 +77,7 @@ sim = opt.Simulation(linkage_distribution_input=linkage_distribution_input,
                      i_max_out=i_max_out,
                      i_max_ring=i_max_ring,
                      additional_metrics=additional_metrics,
+                     population_metrics=None,
                      size_in_MW=size_in_MW,
                      metrics_weights=metrics_weights,
                      branching_propensity=branching_propensity,
@@ -93,7 +99,10 @@ import matplotlib.pyplot as plt
 fig, ax = plt.subplots(1, 1)
 
 a, b = 2, 7.5
-r = 108900 * beta.rvs(a, b, size=1000)
+loc = 147
+scale = 24907
+
+r =beta.rvs(a, b, loc = loc, scale = scale, size=1000)
 ax.hist(r, bins=20, alpha=0.5, color='blue', label='reference',density=True)
 ax.hist(population_MWs, bins=20, alpha=0.5, color='red', label='actual',density=True)
 ax.legend(loc='best', frameon=False)

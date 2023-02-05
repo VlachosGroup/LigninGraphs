@@ -43,23 +43,25 @@ Tmetro = 5
 Tmetro_out = 5
 
 
-i_max = 10000
-i_max_out = 1000
+i_max = 2000
+i_max_out = 5000
 i_max_ring = 500
 
 # total population size, Update it here
-n_population = 5000
+n_population = 100
 
 seed_init = 1
 
 trial_index = 0
 
 # only 11 metrics in this case
-metrics_weights = [1, 1, 1, 1, 10, 10, 1, 1, 1, 1, 1]
+metrics_weights = [1, 1, 1, 1, 10, 10, 1, 1, 1, 1, 1] 
 
 # upper and lower bound of the population size in MW, Update it here
-MW_lower, MW_upper = [300, 1000]
+MW_lower, MW_upper = [300, 2000]
 library_name += '_MW_in_' + str(MW_lower) + '_' + str(MW_upper)
+population_metrics = [MW_upper, MW_upper]
+
 
 # population in this range
 n_population_in_range = ut.generate_population_size_range_from_beta_distribution(MW_lower, 
@@ -83,6 +85,7 @@ sim = opt.Simulation(linkage_distribution_input=linkage_distribution_input,
                      i_max_out=i_max_out,
                      i_max_ring=i_max_ring,
                      additional_metrics=additional_metrics,
+                     population_metrics=None,
                      size_in_MW=size_in_MW,
                      metrics_weights=metrics_weights,
                      branching_propensity=branching_propensity,
@@ -91,6 +94,7 @@ sim = opt.Simulation(linkage_distribution_input=linkage_distribution_input,
 
 sim.run()
 
+#%%
 P_population = sim.P_population
 population = ch.Population(P_population, name=library_name, ResultsName=ResultsName, TrialIndex=str(trial_index))
 population.analyze()

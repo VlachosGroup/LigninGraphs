@@ -175,18 +175,18 @@ class Trajectory():
         if self.use_beta_distribution:
             self.stop_size = ut.generate_random_size_from_beta_distribution(
                 random_state=random_state)
-        if self.use_uniform_distribution:
+        elif self.use_uniform_distribution:
             self.stop_size = ut.generate_random_size_from_uniform_distribution_range(
                 self.min_size, 
                 self.max_size,
                 random_state=random_state)
-            print(self.stop_size)
         else:
             self.stop_size = ut.generate_random_size_from_distribution(self.expected_size,
                                                                        self.max_size,
                                                                        distribution_scaling=self.distribution_scaling,
                                                                        size_in_MW=self.size_in_MW,
                                                                        random_state=random_state)
+        print("\t\tTargeting molecular weight {}". format(self.stop_size))
 
         # set the branching state
         branching_state = None  # no input, no restrictions
@@ -234,7 +234,7 @@ class Trajectory():
         i_step = 0  # event indices
 
         while (current_size <= self.stop_size) and (i_step <= i_max):
-            
+            # print(i_step)
             # Annealing version: (1 - monomer_count_P/self.stop_size) * self.Tmetro
             Tmetro = self.Tmetro
             polymer_i = Polymer(polymer, verbose=False)  # self.verbose)
@@ -523,18 +523,19 @@ class Simulation(Trajectory):
             output file locations, by default os.getcwd()
         """
         # inherit from Trajectory
-        super().__init__(linkage_distribution_input,
-                         monomer_distribution_input,
-                         Tmetro,
-                         expected_size,
-                         max_size,
-                         distribution_scaling,
-                         use_beta_distribution,
-                         additional_metrics,
-                         size_in_MW,
-                         branching_propensity,
-                         metrics_weights,
-                         verbose)
+        super().__init__(linkage_distribution_input=linkage_distribution_input,
+                         monomer_distribution_input=monomer_distribution_input,
+                         Tmetro=Tmetro,
+                         expected_size=expected_size,
+                         max_size=max_size,
+                         min_size=min_size,
+                         distribution_scaling=distribution_scaling,
+                         use_beta_distribution=use_beta_distribution,
+                         additional_metrics=additional_metrics,
+                         size_in_MW=size_in_MW,
+                         branching_propensity=branching_propensity,
+                         metrics_weights=metrics_weights,
+                         verbose=verbose)
 
         # Set up io path
         ResultsPathParent = os.path.join(save_path, ResultsName, library_name)
@@ -587,6 +588,7 @@ class Simulation(Trajectory):
         self.use_beta_distribution = use_beta_distribution
         self.min_size = min_size
         self.use_uniform_distribution = use_uniform_distribution
+        self.distribution_scaling = distribution_scaling
 
         # estimate the maximum MW for scaling purposes
         if self.size_in_MW:
@@ -627,9 +629,9 @@ class Simulation(Trajectory):
             else:
                 metrics_weights_individual = self.metrics_weights
 
-        traj = Trajectory(self.linkage_distribution_input,
-                          self.monomer_distribution_input,
-                          self.Tmetro,
+        traj = Trajectory(linkage_distribution_input=self.linkage_distribution_input,
+                          monomer_distribution_input=self.monomer_distribution_input,
+                          Tmetro=self.Tmetro,
                           expected_size=self.expected_size,
                           max_size=self.max_size,
                           min_size=self.min_size,
@@ -688,6 +690,7 @@ class Simulation(Trajectory):
             # check if the molecule is valid
             if MW_P < 100:
                 continue
+            print("\t\tCurrent molecular weight {}". format(MW_P))
 
             metrics_P = ut.counts_to_metrics(
                 counts_P, additional=self.additional)
@@ -725,6 +728,15 @@ class Simulation(Trajectory):
 
             energy_flag = False
             delta_d = d_average_new - d_average
+            
+            if (self.min_size is not None):
+                min_size_current = self.min_size
+            else: 
+                min_size_current = traj.stop_size * 0.8
+            size_flag = MW_P > min_size_current
+            # print("MW_P:", MW_P)
+            # print("min_size_current:", min_size_current)
+            # print("size_flag:", size_flag)
 
             # accept the change if energy going downhill
             if delta_d <= 0 or self.Tmetro_out == np.inf:
@@ -736,7 +748,7 @@ class Simulation(Trajectory):
                     if np.random.rand() <= w:
                         energy_flag = True
 
-            if energy_flag:  # and distance_flag and NN_flag):
+            if energy_flag and size_flag:  # and distance_flag and NN_flag):
                 d_average = d_average_new
                 counts_population = counts_population_copy
                 monomer_count_population = monomer_count_population_copy

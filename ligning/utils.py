@@ -581,7 +581,9 @@ def generate_random_size_from_beta_distribution(
     #     min_size = 145
     #     max_size =  26000
     a, b = 2, 7.5
-    size = 108900 * beta.rvs(a, b, random_state=random_state)
+    loc = 147
+    scale = 24907
+    size = beta.rvs(a, b, loc = loc, scale = scale, random_state=random_state)
 
     return size
 
@@ -606,7 +608,10 @@ def generate_population_size_range_from_beta_distribution(
     if random_state is None:
             random_state = np.random
     a, b = 2, 7.5
-    delta_prob = beta.cdf(max_size/108900, a, b) - beta.cdf(min_size/108900, a, b)
+    loc = 147
+    scale = 24907
+
+    delta_prob = beta.cdf(max_size, a, b, loc, scale) - beta.cdf(min_size, a, b, loc, scale)
     n_simulation = int(delta_prob * n_total_population)
 
     return n_simulation

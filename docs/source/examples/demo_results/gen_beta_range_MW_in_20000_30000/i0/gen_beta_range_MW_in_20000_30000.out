@@ -1,0 +1,610 @@
+==========Generating gen_beta_range_MW_in_20000_30000 libraray =========
+==========Current trial No. 0 =========
+		2 monomers after MC step 1
+		Polymerization takes 0.1 min
+	n_polymer 0 added on iteration no 0 
+		2 monomers after MC step 1
+		Polymerization takes 0.1 min
+	n_polymer 1 added on iteration no 1 
+		1 monomers after MC step 1
+		2 monomers after MC step 2
+		Polymerization takes 0.1 min
+	n_polymer 2 added on iteration no 2 
+		2 monomers after MC step 1
+		3 monomers after MC step 37
+		Polymerization takes 0.1 min
+	n_polymer 3 added on iteration no 3 
+		2 monomers after MC step 1
+		Polymerization takes 0.1 min
+	n_polymer 4 added on iteration no 4 
+		2 monomers after MC step 1
+		Polymerization takes 0.1 min
+	n_polymer 5 added on iteration no 5 
+		2 monomers after MC step 1
+		Polymerization takes 0.1 min
+	Polymer addition rejected
+		2 monomers after MC step 1
+		Polymerization takes 0.1 min
+	Polymer addition rejected
+		2 monomers after MC step 1
+		Polymerization takes 0.1 min
+	n_polymer 6 added on iteration no 8 
+		2 monomers after MC step 1
+		3 monomers after MC step 6
+		3 monomers after MC step 24
+		3 monomers after MC step 26
+		3 monomers after MC step 32
+		3 monomers after MC step 47
+		3 monomers after MC step 71
+		3 monomers after MC step 90
+		3 monomers after MC step 109
+		3 monomers after MC step 128
+		3 monomers after MC step 147
+		3 monomers after MC step 166
+		3 monomers after MC step 185
+		3 monomers after MC step 204
+		3 monomers after MC step 223
+		3 monomers after MC step 242
+		3 monomers after MC step 261
+		3 monomers after MC step 280
+		3 monomers after MC step 299
+		3 monomers after MC step 318
+		3 monomers after MC step 337
+		3 monomers after MC step 356
+		3 monomers after MC step 375
+		3 monomers after MC step 394
+		3 monomers after MC step 413
+		3 monomers after MC step 432
+		3 monomers after MC step 451
+		3 monomers after MC step 470
+		3 monomers after MC step 489
+		3 monomers after MC step 508
+		3 monomers after MC step 527
+		3 monomers after MC step 546
+		3 monomers after MC step 565
+		3 monomers after MC step 584
+		3 monomers after MC step 603
+		3 monomers after MC step 622
+		3 monomers after MC step 641
+		3 monomers after MC step 660
+		3 monomers after MC step 679
+		3 monomers after MC step 698
+		3 monomers after MC step 717
+		3 monomers after MC step 736
+		3 monomers after MC step 755
+		3 monomers after MC step 774
+		3 monomers after MC step 793
+		3 monomers after MC step 812
+		3 monomers after MC step 831
+		3 monomers after MC step 850
+		3 monomers after MC step 869
+		3 monomers after MC step 888
+		3 monomers after MC step 907
+		3 monomers after MC step 926
+		3 monomers after MC step 945
+		3 monomers after MC step 964
+		3 monomers after MC step 983
+		3 monomers after MC step 1002
+		3 monomers after MC step 1021
+		3 monomers after MC step 1040
+		3 monomers after MC step 1059
+		3 monomers after MC step 1078
+		3 monomers after MC step 1097
+		3 monomers after MC step 1116
+		3 monomers after MC step 1135
+		3 monomers after MC step 1154
+		3 monomers after MC step 1173
+		3 monomers after MC step 1192
+		3 monomers after MC step 1211
+		3 monomers after MC step 1230
+		3 monomers after MC step 1249
+		3 monomers after MC step 1268
+		3 monomers after MC step 1287
+		3 monomers after MC step 1306
+		3 monomers after MC step 1325
+		3 monomers after MC step 1344
+		3 monomers after MC step 1363
+		3 monomers after MC step 1382
+		3 monomers after MC step 1401
+		3 monomers after MC step 1420
+		3 monomers after MC step 1439
+		3 monomers after MC step 1458
+		3 monomers after MC step 1477
+		3 monomers after MC step 1496
+		3 monomers after MC step 1515
+		3 monomers after MC step 1534
+		3 monomers after MC step 1553
+		3 monomers after MC step 1572
+		3 monomers after MC step 1591
+		3 monomers after MC step 1610
+		3 monomers after MC step 1629
+		3 monomers after MC step 1648
+		3 monomers after MC step 1667
+		3 monomers after MC step 1686
+		3 monomers after MC step 1705
+		3 monomers after MC step 1724
+		3 monomers after MC step 1743
+		3 monomers after MC step 1762
+		3 monomers after MC step 1781
+		3 monomers after MC step 1800
+		3 monomers after MC step 1819
+		3 monomers after MC step 1838
+		3 monomers after MC step 1857
+		3 monomers after MC step 1876
+		3 monomers after MC step 1895
+		3 monomers after MC step 1914
+		3 monomers after MC step 1933
+		3 monomers after MC step 1952
+		3 monomers after MC step 1971
+		3 monomers after MC step 1990
+		3 monomers after MC step 2009
+		3 monomers after MC step 2028
+		3 monomers after MC step 2047
+		3 monomers after MC step 2066
+		3 monomers after MC step 2085
+		3 monomers after MC step 2104
+		3 monomers after MC step 2123
+		3 monomers after MC step 2142
+		3 monomers after MC step 2161
+		3 monomers after MC step 2180
+		3 monomers after MC step 2199
+		3 monomers after MC step 2218
+		3 monomers after MC step 2237
+		3 monomers after MC step 2256
+		3 monomers after MC step 2275
+		3 monomers after MC step 2294
+		3 monomers after MC step 2313
+		3 monomers after MC step 2332
+		3 monomers after MC step 2351
+		3 monomers after MC step 2370
+		3 monomers after MC step 2389
+		3 monomers after MC step 2408
+		3 monomers after MC step 2427
+		3 monomers after MC step 2446
+		3 monomers after MC step 2465
+		3 monomers after MC step 2484
+		3 monomers after MC step 2503
+		3 monomers after MC step 2522
+		3 monomers after MC step 2541
+		3 monomers after MC step 2560
+		3 monomers after MC step 2579
+		3 monomers after MC step 2598
+		3 monomers after MC step 2617
+		3 monomers after MC step 2636
+		3 monomers after MC step 2655
+		3 monomers after MC step 2674
+		3 monomers after MC step 2693
+		3 monomers after MC step 2712
+		3 monomers after MC step 2731
+		3 monomers after MC step 2750
+		3 monomers after MC step 2769
+		3 monomers after MC step 2788
+		3 monomers after MC step 2807
+		3 monomers after MC step 2826
+		3 monomers after MC step 2845
+		3 monomers after MC step 2864
+		3 monomers after MC step 2883
+		3 monomers after MC step 2902
+		3 monomers after MC step 2921
+		3 monomers after MC step 2940
+		3 monomers after MC step 2959
+		3 monomers after MC step 2978
+		3 monomers after MC step 2997
+		3 monomers after MC step 3016
+		3 monomers after MC step 3035
+		3 monomers after MC step 3054
+		3 monomers after MC step 3073
+		3 monomers after MC step 3092
+		3 monomers after MC step 3111
+		3 monomers after MC step 3130
+		3 monomers after MC step 3149
+		3 monomers after MC step 3168
+		3 monomers after MC step 3187
+		3 monomers after MC step 3206
+		3 monomers after MC step 3225
+		3 monomers after MC step 3244
+		3 monomers after MC step 3263
+		3 monomers after MC step 3282
+		3 monomers after MC step 3301
+		3 monomers after MC step 3320
+		3 monomers after MC step 3339
+		3 monomers after MC step 3358
+		3 monomers after MC step 3377
+		3 monomers after MC step 3396
+		3 monomers after MC step 3415
+		3 monomers after MC step 3434
+		3 monomers after MC step 3453
+		3 monomers after MC step 3472
+		3 monomers after MC step 3491
+		3 monomers after MC step 3510
+		3 monomers after MC step 3529
+		3 monomers after MC step 3548
+		3 monomers after MC step 3567
+		3 monomers after MC step 3586
+		3 monomers after MC step 3605
+		3 monomers after MC step 3624
+		3 monomers after MC step 3643
+		3 monomers after MC step 3662
+		3 monomers after MC step 3681
+		3 monomers after MC step 3700
+		3 monomers after MC step 3719
+		3 monomers after MC step 3738
+		3 monomers after MC step 3757
+		3 monomers after MC step 3776
+		3 monomers after MC step 3795
+		3 monomers after MC step 3814
+		3 monomers after MC step 3833
+		3 monomers after MC step 3852
+		3 monomers after MC step 3871
+		3 monomers after MC step 3890
+		3 monomers after MC step 3909
+		3 monomers after MC step 3928
+		3 monomers after MC step 3947
+		3 monomers after MC step 3966
+		3 monomers after MC step 3985
+		3 monomers after MC step 4004
+		3 monomers after MC step 4023
+		3 monomers after MC step 4042
+		3 monomers after MC step 4061
+		3 monomers after MC step 4080
+		3 monomers after MC step 4099
+		3 monomers after MC step 4118
+		3 monomers after MC step 4137
+		3 monomers after MC step 4156
+		3 monomers after MC step 4175
+		3 monomers after MC step 4194
+		3 monomers after MC step 4213
+		3 monomers after MC step 4232
+		3 monomers after MC step 4251
+		3 monomers after MC step 4270
+		3 monomers after MC step 4289
+		3 monomers after MC step 4308
+		3 monomers after MC step 4327
+		3 monomers after MC step 4346
+		3 monomers after MC step 4365
+		3 monomers after MC step 4384
+		3 monomers after MC step 4403
+		3 monomers after MC step 4422
+		3 monomers after MC step 4441
+		3 monomers after MC step 4460
+		3 monomers after MC step 4479
+		3 monomers after MC step 4498
+		3 monomers after MC step 4517
+		3 monomers after MC step 4536
+		3 monomers after MC step 4555
+		3 monomers after MC step 4574
+		3 monomers after MC step 4593
+		3 monomers after MC step 4612
+		3 monomers after MC step 4631
+		3 monomers after MC step 4650
+		3 monomers after MC step 4669
+		3 monomers after MC step 4688
+		3 monomers after MC step 4707
+		3 monomers after MC step 4726
+		3 monomers after MC step 4745
+		3 monomers after MC step 4764
+		3 monomers after MC step 4783
+		3 monomers after MC step 4802
+		3 monomers after MC step 4821
+		3 monomers after MC step 4840
+		3 monomers after MC step 4859
+		3 monomers after MC step 4878
+		3 monomers after MC step 4897
+		3 monomers after MC step 4916
+		3 monomers after MC step 4935
+		3 monomers after MC step 4954
+		3 monomers after MC step 4973
+		3 monomers after MC step 4992
+		3 monomers after MC step 5011
+		3 monomers after MC step 5030
+		3 monomers after MC step 5049
+		3 monomers after MC step 5068
+		3 monomers after MC step 5087
+		3 monomers after MC step 5106
+		3 monomers after MC step 5125
+		3 monomers after MC step 5144
+		3 monomers after MC step 5163
+		3 monomers after MC step 5182
+		3 monomers after MC step 5201
+		3 monomers after MC step 5220
+		3 monomers after MC step 5239
+		3 monomers after MC step 5258
+		3 monomers after MC step 5277
+		3 monomers after MC step 5296
+		3 monomers after MC step 5315
+		3 monomers after MC step 5334
+		3 monomers after MC step 5353
+		3 monomers after MC step 5372
+		3 monomers after MC step 5391
+		3 monomers after MC step 5410
+		3 monomers after MC step 5429
+		3 monomers after MC step 5448
+		3 monomers after MC step 5467
+		3 monomers after MC step 5486
+		3 monomers after MC step 5505
+		3 monomers after MC step 5524
+		3 monomers after MC step 5543
+		3 monomers after MC step 5562
+		3 monomers after MC step 5581
+		3 monomers after MC step 5600
+		3 monomers after MC step 5619
+		3 monomers after MC step 5638
+		3 monomers after MC step 5657
+		3 monomers after MC step 5676
+		3 monomers after MC step 5695
+		3 monomers after MC step 5714
+		3 monomers after MC step 5733
+		3 monomers after MC step 5752
+		3 monomers after MC step 5771
+		3 monomers after MC step 5790
+		3 monomers after MC step 5809
+		3 monomers after MC step 5828
+		3 monomers after MC step 5847
+		3 monomers after MC step 5866
+		3 monomers after MC step 5885
+		3 monomers after MC step 5904
+		3 monomers after MC step 5923
+		3 monomers after MC step 5942
+		3 monomers after MC step 5961
+		3 monomers after MC step 5980
+		3 monomers after MC step 5999
+		3 monomers after MC step 6018
+		3 monomers after MC step 6037
+		3 monomers after MC step 6056
+		3 monomers after MC step 6075
+		3 monomers after MC step 6094
+		3 monomers after MC step 6113
+		3 monomers after MC step 6132
+		3 monomers after MC step 6151
+		3 monomers after MC step 6170
+		3 monomers after MC step 6189
+		3 monomers after MC step 6208
+		3 monomers after MC step 6227
+		3 monomers after MC step 6246
+		3 monomers after MC step 6265
+		3 monomers after MC step 6284
+		3 monomers after MC step 6303
+		3 monomers after MC step 6322
+		3 monomers after MC step 6341
+		3 monomers after MC step 6360
+		3 monomers after MC step 6379
+		3 monomers after MC step 6398
+		3 monomers after MC step 6417
+		3 monomers after MC step 6436
+		3 monomers after MC step 6455
+		3 monomers after MC step 6474
+		3 monomers after MC step 6493
+		3 monomers after MC step 6512
+		3 monomers after MC step 6531
+		3 monomers after MC step 6550
+		3 monomers after MC step 6569
+		3 monomers after MC step 6588
+		3 monomers after MC step 6607
+		3 monomers after MC step 6626
+		3 monomers after MC step 6645
+		3 monomers after MC step 6664
+		3 monomers after MC step 6683
+		3 monomers after MC step 6702
+		3 monomers after MC step 6721
+		3 monomers after MC step 6740
+		3 monomers after MC step 6759
+		3 monomers after MC step 6778
+		3 monomers after MC step 6797
+		3 monomers after MC step 6816
+		3 monomers after MC step 6835
+		3 monomers after MC step 6854
+		3 monomers after MC step 6873
+		3 monomers after MC step 6892
+		3 monomers after MC step 6911
+		3 monomers after MC step 6930
+		3 monomers after MC step 6949
+		3 monomers after MC step 6968
+		3 monomers after MC step 6987
+		3 monomers after MC step 7006
+		3 monomers after MC step 7025
+		3 monomers after MC step 7044
+		3 monomers after MC step 7063
+		3 monomers after MC step 7082
+		3 monomers after MC step 7101
+		3 monomers after MC step 7120
+		3 monomers after MC step 7139
+		3 monomers after MC step 7158
+		3 monomers after MC step 7177
+		3 monomers after MC step 7196
+		3 monomers after MC step 7215
+		3 monomers after MC step 7234
+		3 monomers after MC step 7253
+		3 monomers after MC step 7272
+		3 monomers after MC step 7291
+		3 monomers after MC step 7310
+		3 monomers after MC step 7329
+		3 monomers after MC step 7348
+		3 monomers after MC step 7367
+		3 monomers after MC step 7386
+		3 monomers after MC step 7405
+		3 monomers after MC step 7424
+		3 monomers after MC step 7443
+		3 monomers after MC step 7462
+		3 monomers after MC step 7481
+		3 monomers after MC step 7500
+		3 monomers after MC step 7519
+		3 monomers after MC step 7538
+		3 monomers after MC step 7557
+		3 monomers after MC step 7576
+		3 monomers after MC step 7595
+		3 monomers after MC step 7614
+		3 monomers after MC step 7633
+		3 monomers after MC step 7652
+		3 monomers after MC step 7671
+		3 monomers after MC step 7690
+		3 monomers after MC step 7709
+		3 monomers after MC step 7728
+		3 monomers after MC step 7747
+		3 monomers after MC step 7766
+		3 monomers after MC step 7785
+		3 monomers after MC step 7804
+		3 monomers after MC step 7823
+		3 monomers after MC step 7842
+		3 monomers after MC step 7861
+		3 monomers after MC step 7880
+		3 monomers after MC step 7899
+		3 monomers after MC step 7918
+		3 monomers after MC step 7937
+		3 monomers after MC step 7956
+		3 monomers after MC step 7975
+		3 monomers after MC step 7994
+		3 monomers after MC step 8013
+		3 monomers after MC step 8032
+		3 monomers after MC step 8051
+		3 monomers after MC step 8070
+		3 monomers after MC step 8089
+		3 monomers after MC step 8108
+		3 monomers after MC step 8127
+		3 monomers after MC step 8146
+		3 monomers after MC step 8165
+		3 monomers after MC step 8184
+		3 monomers after MC step 8203
+		3 monomers after MC step 8222
+		3 monomers after MC step 8241
+		3 monomers after MC step 8260
+		3 monomers after MC step 8279
+		3 monomers after MC step 8298
+		3 monomers after MC step 8317
+		3 monomers after MC step 8336
+		3 monomers after MC step 8355
+		3 monomers after MC step 8374
+		3 monomers after MC step 8393
+		3 monomers after MC step 8412
+		3 monomers after MC step 8431
+		3 monomers after MC step 8450
+		3 monomers after MC step 8469
+		3 monomers after MC step 8488
+		3 monomers after MC step 8507
+		3 monomers after MC step 8526
+		3 monomers after MC step 8545
+		3 monomers after MC step 8564
+		3 monomers after MC step 8583
+		3 monomers after MC step 8602
+		3 monomers after MC step 8621
+		3 monomers after MC step 8640
+		3 monomers after MC step 8659
+		3 monomers after MC step 8678
+		3 monomers after MC step 8697
+		3 monomers after MC step 8716
+		3 monomers after MC step 8735
+		3 monomers after MC step 8754
+		3 monomers after MC step 8773
+		3 monomers after MC step 8792
+		3 monomers after MC step 8811
+		3 monomers after MC step 8830
+		3 monomers after MC step 8849
+		3 monomers after MC step 8868
+		3 monomers after MC step 8887
+		3 monomers after MC step 8906
+		3 monomers after MC step 8925
+		3 monomers after MC step 8944
+		3 monomers after MC step 8963
+		3 monomers after MC step 8982
+		3 monomers after MC step 9001
+		3 monomers after MC step 9020
+		3 monomers after MC step 9039
+		3 monomers after MC step 9058
+		3 monomers after MC step 9077
+		3 monomers after MC step 9096
+		3 monomers after MC step 9115
+		3 monomers after MC step 9134
+		3 monomers after MC step 9153
+		3 monomers after MC step 9172
+		3 monomers after MC step 9191
+		3 monomers after MC step 9210
+		3 monomers after MC step 9229
+		3 monomers after MC step 9248
+		3 monomers after MC step 9267
+		3 monomers after MC step 9286
+		3 monomers after MC step 9305
+		3 monomers after MC step 9324
+		3 monomers after MC step 9343
+		3 monomers after MC step 9362
+		3 monomers after MC step 9381
+		3 monomers after MC step 9400
+		3 monomers after MC step 9419
+		3 monomers after MC step 9438
+		3 monomers after MC step 9457
+		3 monomers after MC step 9476
+		3 monomers after MC step 9495
+		3 monomers after MC step 9514
+		3 monomers after MC step 9533
+		3 monomers after MC step 9552
+		3 monomers after MC step 9571
+		3 monomers after MC step 9590
+		3 monomers after MC step 9609
+		3 monomers after MC step 9628
+		3 monomers after MC step 9647
+		3 monomers after MC step 9666
+		3 monomers after MC step 9685
+		3 monomers after MC step 9704
+		3 monomers after MC step 9723
+		3 monomers after MC step 9742
+		3 monomers after MC step 9761
+		3 monomers after MC step 9780
+		3 monomers after MC step 9799
+		3 monomers after MC step 9818
+		3 monomers after MC step 9837
+		3 monomers after MC step 9856
+		3 monomers after MC step 9875
+		3 monomers after MC step 9894
+		3 monomers after MC step 9913
+		3 monomers after MC step 9932
+		3 monomers after MC step 9951
+		3 monomers after MC step 9970
+		3 monomers after MC step 9989
+		Polymerization takes 0.1 min
+	Polymer addition rejected
+		1 monomers after MC step 1
+		2 monomers after MC step 2
+		Polymerization takes 0.1 min
+	n_polymer 7 added on iteration no 10 
+		2 monomers after MC step 1
+		3 monomers after MC step 2
+		Polymerization takes 0.1 min
+	n_polymer 8 added on iteration no 11 
+		2 monomers after MC step 1
+		3 monomers after MC step 3
+		Polymerization takes 0.1 min
+	n_polymer 9 added on iteration no 12 
+		2 monomers after MC step 1
+		Polymerization takes 0.1 min
+	n_polymer 10 added on iteration no 13 
+Runtime for creating all polymers : 1.27 minutes 
+Target values:
+{   '4-O-5': 0.0707070707070707,
+    '5-5': 0.030303030303030304,
+    'G': 0.3,
+    'H': 0.0,
+    'S': 0.7,
+    'alpha-O-4': 0.0,
+    'beta-1': 0.0,
+    'beta-5': 0.0707070707070707,
+    'beta-O-4': 0.7575757575757576,
+    'beta-beta': 0.0707070707070707,
+    'branching_coeff': 0.5}
+Optimal simulated values:
+{   '4-O-5': 0.12,
+    '5-5': 0.0,
+    'G': 0.3888888888888889,
+    'H': 0.0,
+    'MW': 674.7045454545455,
+    'MW_weighted': 684.6137542733184,
+    'S': 0.6111111111111112,
+    'alpha-O-4': 0.0,
+    'beta-1': 0.0,
+    'beta-5': 0.08,
+    'beta-O-4': 0.72,
+    'beta-beta': 0.08,
+    'branching_coeff': 0.08333333333333333,
+    'monomer_count': 3.272727272727273}
+
+Acceptance Rates:
+Monomer Acceptance: 0.00022854857371405716
+Polymer Acceptance: 0.8461538461538461
+Runtime for analyzing the results : 0.00 minutes 

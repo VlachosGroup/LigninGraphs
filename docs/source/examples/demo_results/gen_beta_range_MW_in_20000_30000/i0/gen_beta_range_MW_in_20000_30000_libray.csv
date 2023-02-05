@@ -5,9 +5,8 @@
 0,0,2,2,1,0,2,0.0,0,0,0,0.25,810.846,4,5.0,6.0,OCC=Cc1cc(OC)c(OC(CO)C(O)c2cc(OC)c(OC(CO)C(O)c3cc(OC)c(O)c(OC)c3)c(Oc3c(OC)cc(C=CCO)cc3)c2)c(OC)c1
 0,0,0,3,0,0,2,0.0,0,0,0,0.0,662.6850000000001,3,4.0,6.0,OCC(Oc1c(OC)cc(C=CCO)cc1OC)C(O)c1cc(OC)c(OC(CO)C(O)c2cc(OC)c(O)c(OC)c2)c(OC)c1
 0,0,2,1,0,0,0,0.0,2,0,0,0.0,566.603,3,4.0,4.0,OCC=Cc1cc(OC)c2c(C(CO)C(c3cc(OC)c4c(C(CO)C(c5cc(OC)c(O)c(OC)c5)O4)c3)O2)c1
-0,0,1,2,0,0,1,0.0,0,1,0,0.0,614.644,3,3.0,5.0,Oc1c(OC)cc(C2C3COC(C3CO2)c2cc(OC)c(OC(CO)C(O)c3cc(OC)c(O)cc3)c(OC)c2)cc1OC
+0,0,1,2,0,0,1,0.0,0,1,0,0.0,614.644,3,3.0,5.0,Oc1c(OC)cc(C2OCC3C(OCC23)c2cc(OC)c(OC(CO)C(O)c3cc(OC)c(O)cc3)c(OC)c2)cc1OC
 0,0,1,2,0,0,2,0.0,0,0,0,0.0,632.659,3,4.0,5.0,OCC=Cc1cc(OC)c(OC(CO)C(O)c2cc(OC)c(OC(CO)C(O)c3cc(OC)c(O)cc3)c(OC)c2)c(OC)c1
-0,0,3,1,1,0,2,0.0,0,0,0,0.25,780.8199999999999,4,5.0,5.0,OCC(Oc1c(OC)cc(C=CCO)cc1)C(O)c1cc(OC)c(OC(CO)C(O)c2cc(OC)c(O)cc2)c(Oc2c(OC)cc(C=CCO)cc2OC)c1
+0,0,2,2,1,0,2,0.0,0,0,0,0.25,810.846,4,5.0,6.0,OCC(Oc1c(OC)cc(C=CCO)cc1OC)C(O)c1cc(OC)c(OC(CO)C(O)c2cc(OC)c(O)cc2)c(Oc2c(OC)cc(C=CCO)cc2OC)c1
+0,0,3,1,1,0,2,0.0,0,0,0,0.25,780.8199999999999,4,5.0,5.0,Oc1c(OC)cc(C(O)C(Oc2c(OC)cc(C(O)C(Oc3c(OC)cc(C=CCO)cc3)CO)cc2Oc2c(OC)cc(C=CCO)cc2OC)CO)cc1
 0,0,0,3,0,0,1,0.0,0,1,0,0.0,644.67,3,3.0,6.0,Oc1c(OC)cc(C(O)C(CO)Oc2c(OC)cc(C3C4COC(C4CO3)c3cc(OC)c(O)c(OC)c3)cc2OC)cc1OC
-0,0,0,2,0,0,1,0.0,0,0,0,0.0,436.457,2,3.0,4.0,OCC=Cc1cc(OC)c(OC(CO)C(O)c2cc(OC)c(O)c(OC)c2)c(OC)c1
-0,0,0,3,0,0,2,0.0,0,0,0,0.0,662.6850000000001,3,4.0,6.0,Oc1c(OC)cc(C(O)C(Oc2c(OC)cc(C(O)C(Oc3c(OC)cc(C=CCO)cc3OC)CO)cc2OC)CO)cc1OC
