@@ -203,11 +203,6 @@ def graph_to_mol(
         Chem.Draw.MolToFile(mol, filename, size=(500, 500))
     
     return mol
-    
-def graph_to_LigninBuilder(G: nxgraph, 
-    name: Optional[str]='test',
-    save_path: Optional[str]=os.getcwd()):
-    #G.nodes() should list the monomers. That needs to be written first
 
 def smiles_to_formula(smiles: str) -> str:
     """Convert the smiles to the chemical formula in C, H and O
