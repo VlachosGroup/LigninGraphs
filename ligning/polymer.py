@@ -424,7 +424,7 @@ class Polymer(PolymerGraph):
 
         # Add the edges to monomer nodes
         print(linkage_new_name, M1_index, M2_index)
-        if linkage[0] <= linkage[1]:
+        if linkage_index[0] <= linkage_index[1]:
             self.bigG.add_edges_from([(M1_index, M2_index)], btype=linkage_new_name)
         else:
             self.bigG.add_edges_from([(M2_index, M1_index)], btype=linkage_new_name)
