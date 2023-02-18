@@ -93,6 +93,46 @@ def draw_big_graph(G: nxgraph) -> None:
     # big graph is marked by hexagons 
     draw_graph(G, node_labels, node_shape = 'h', node_size=1000)
 
+def write_big_graph_LigninBuilder(G: nxgraph,
+    name: Optional[str]='test',
+    save_path: Optional[str]=os.getcwd()) -> None:
+    """Convert the big graph to a Tcl script that VMD and LigninBuilder can convert to a structure
+
+    Parameters
+    ----------
+    G : nxgraph
+        a connected graph, each node is a monomer, edges are linkages
+    name : Optional[str], optional
+        name of the file to be written without the .tcl extension, by default 'test', creating a 'test.tcl' file
+    segname : Optional[str], optional
+        segment name created.
+    save_path : Optional[str], optional
+        path to save the figure, by default os.getcwd()
+    """ 
+    if not os.path.exists(save_path):
+        os.mkdir(save_path)
+    filename = os.path.join(save_path, name+'.tcl')
+    with open(filename, 'w') as fout:
+        fout.write("package require psfgen\ntopology toppar/top_all36_cgenff.rtf\ntopology toppar/top_lignin.top\n"
+           "topology toppar/top_spirodienone.top\n")
+        # Write monomers
+        fout.write("resetpsf\nsegment %s {\n" % segname)
+        for i in range(len(G.nodes)):
+            if G.nodes[i]['mtype'] == 'G':
+                monomer = "GUAI"
+            elif G.nodes[i]['mtype'] == 'C':
+                monomer = "CAT"
+            elif G.nodes[i]['mtype'] == 'H':
+                monomer = "PHP"
+            elif G.nodes[i]['mtype'] == 'S':
+                monomer = "SYR"
+            else:
+                raise ValueError("Monomer type not allowed. Must input C, H, G or S.")
+            fout.write("residue %d %s\n" % (i+1, monomer))
+        fout.write("}\n")
+        for i in range(len(G.edges)):
+            print(G.edges[i], G.edges[i]['btype'])
+        #fout.write("patch %s %s:%s %s:%s\n" % (patch, segname, i+1, segname, j+1))
 
 def draw_atomic_graph(G: nxgraph) -> None:
     """Plot the atomic graph
@@ -164,7 +204,10 @@ def graph_to_mol(
     
     return mol
     
-
+def graph_to_LigninBuilder(G: nxgraph, 
+    name: Optional[str]='test',
+    save_path: Optional[str]=os.getcwd()):
+    #G.nodes() should list the monomers. That needs to be written first
 
 def smiles_to_formula(smiles: str) -> str:
     """Convert the smiles to the chemical formula in C, H and O
