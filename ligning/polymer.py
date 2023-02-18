@@ -475,7 +475,10 @@ class Polymer(PolymerGraph):
             self.G = PG_temp.G
             # Update the polymer big graph
             if monomer_new is not None:
-                self.bigG = ut.join_two(self.bigG, monomer_new.bigG)
+                if linkage_index[0] < linkage_index[1]:
+                    self.bigG = ut.join_two(self.bigG, monomer_new.bigG)
+                else:
+                    self.bigG = ut.join_two(monomer_new.bigG, self.bigG)
             # Update the avaible C1 list after addition of a new monomer and a new linkage  
             self.C1_indices_in_polymer = self.find_available_C1_in_polymer()
             # Update the unit dictionary
