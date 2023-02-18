@@ -221,6 +221,7 @@ class PolymerGraph():
         # Define the edge properties
         #new bond as carbon/oxygen indices
         linkage_new = linkage_index 
+        print(linkage_new)
         C1_node = self.G.nodes[C1_index_in_polymer]
         C2_node = self.G.nodes[C2_index_in_polymer]
         
@@ -422,6 +423,7 @@ class Polymer(PolymerGraph):
         M2_index = self.G.nodes[C2_index_in_polymer]['mi']
 
         # Add the edges to monomer nodes
+        print(linkage_new_name, M1_index, M2_index)
         self.bigG.add_edges_from([(M1_index, M2_index)], btype=linkage_new_name)
 
 
@@ -463,10 +465,10 @@ class Polymer(PolymerGraph):
         if monomer_new is not None:
             monomer_new.create()
             PG_temp.G = ut.join_two(PG_temp.G, monomer_new.G)
-        
+        print("Linkage index", linkage_index)
         # Add the linkage
         new_linkage_flag = PG_temp.connect_C1_C2(linkage_index, C1_index_in_polymer, C2_index_in_polymer)
-        
+        print("New Linkage Flag")
         # If a new linakge does form
         if new_linkage_flag: 
             # Update the polymer graph
