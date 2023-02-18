@@ -424,7 +424,10 @@ class Polymer(PolymerGraph):
 
         # Add the edges to monomer nodes
         print(linkage_new_name, M1_index, M2_index)
-        self.bigG.add_edges_from([(M1_index, M2_index)], btype=linkage_new_name)
+        if linkage[0] <= linkage[1]:
+            self.bigG.add_edges_from([(M1_index, M2_index)], btype=linkage_new_name)
+        else:
+            self.bigG.add_edges_from([(M2_index, M1_index)], btype=linkage_new_name)
 
 
     def try_adding_new(
@@ -475,10 +478,7 @@ class Polymer(PolymerGraph):
             self.G = PG_temp.G
             # Update the polymer big graph
             if monomer_new is not None:
-                if linkage_index[0] < linkage_index[1]:
-                    self.bigG = ut.join_two(self.bigG, monomer_new.bigG)
-                else:
-                    self.bigG = ut.join_two(monomer_new.bigG, self.bigG)
+                self.bigG = ut.join_two(self.bigG, monomer_new.bigG)
             # Update the avaible C1 list after addition of a new monomer and a new linkage  
             self.C1_indices_in_polymer = self.find_available_C1_in_polymer()
             # Update the unit dictionary
