@@ -2,7 +2,7 @@
 Build lignin polymers
 """
 import networkx as nx
-
+import os
 from typing import Optional, TypeVar, Union, Tuple, List
 from copy import copy
 import warnings
