@@ -920,7 +920,7 @@ class Polymer(PolymerGraph):
                "topology toppar/top_spirodienone.top\n")
             # Write monomers
             fout.write("resetpsf\nsegment %s {\n" % segname)
-            for i in range(len(G.nodes)):
+            for i in range(len(H.nodes)):
                 if H.nodes[i]['mtype'] == 'G':
                     monomer = "GUAI"
                 elif H.nodes[i]['mtype'] == 'C':
