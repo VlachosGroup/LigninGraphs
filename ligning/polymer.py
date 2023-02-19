@@ -896,6 +896,67 @@ class Polymer(PolymerGraph):
         
         return new_linkage_flag
 
+    def write_LigninBuilder( name: Optional[str]='test',
+        segname: Optional[str]='L',
+        save_path: Optional[str]=os.getcwd()) -> None:
+        """Convert this polymer to a Tcl script that VMD and LigninBuilder can convert to a 3D structure
+
+        Parameters
+        ----------
+        name : Optional[str], optional
+            name of the file to be written without the .tcl extension, by default 'test', creating a 'test.tcl' file
+        segname : Optional[str], optional
+            segment name created. Default is "L"
+        save_path : Optional[str], optional
+            path to save the figure, by default os.getcwd()
+        """ 
+        H = self.bigG
+        if not os.path.exists(save_path):
+            os.mkdir(save_path)
+        filename = os.path.join(save_path, name+'.tcl')
+        with open(filename, 'w') as fout:
+            fout.write("package require psfgen\ntopology toppar/top_all36_cgenff.rtf\ntopology toppar/top_lignin.top\n"
+               "topology toppar/top_spirodienone.top\n")
+            # Write monomers
+            fout.write("resetpsf\nsegment %s {\n" % segname)
+            for i in range(len(G.nodes)):
+                if H.nodes[i]['mtype'] == 'G':
+                    monomer = "GUAI"
+                elif H.nodes[i]['mtype'] == 'C':
+                    monomer = "CAT"
+                elif H.nodes[i]['mtype'] == 'H':
+                    monomer = "PHP"
+                elif H.nodes[i]['mtype'] == 'S':
+                    monomer = "SYR"
+                else:
+                    raise ValueError("Monomer type not allowed. Must input C, H, G or S.")
+                fout.write("residue %d %s\n" % (i+1, monomer))
+            fout.write("}\n")
+            #Write linkages
+            for ei in list(H.edges):
+                #ei will be the tuple describing the nodes that are connected.
+                #The order is important! The first node is the residue with the lower numbered carbon involved in the linkage.
+                #Based on the patches used by LigninBuilder, sometimes the "first" residue in the patch is the first residue in the graph, and sometimes its the second.
+                if H.edges[ei]['btype'] == '4-O-5':
+                    fout.write("patch 4O5 %s:%s %s:%s\n" % (segname, ei[0]+1, segname, ei[1]+1))
+                elif H.edges[ei]['btype'] == 'alpha-O-4':
+                    fout.write("patch AO4 %s:%s %s:%s\n" % (segname, ei[1]+1, segname, ei[0]+1))
+                elif H.edges[ei]['btype'] == 'beta-O-4':
+                    fout.write("patch BO4 %s:%s %s:%s\n" % (segname, ei[1]+1, segname, ei[0]+1))
+                elif H.edges[ei]['btype'] == '5-5':
+                    fout.write("patch 55 %s:%s %s:%s\n" % (segname, ei[0]+1, segname, ei[1]+1))
+                elif H.edges[ei]['btype'] == '5-5':
+                    fout.write("patch 55 %s:%s %s:%s\n" % (segname, ei[0]+1, segname, ei[1]+1))
+                elif H.edges[ei]['btype'] == 'beta-5':
+                    if H.nodes[ei[0]]['mtype'] == 'H':
+                        fout.write("patch B5P %s:%s %s:%s\n" % (segname, ei[1]+1, segname, ei[0]+1))
+                    else:
+                        fout.write("patch B5%s %s:%s %s:%s\n" % (H.nodes[ei[0]]['mtype'], segname, ei[1]+1, segname, ei[0]+1))
+                elif H.edges[ei]['btype'] == 'beta-beta':
+                    fout.write("patch BB %s:%s %s:%s\n" % (segname, ei[0]+1, segname, ei[1]+1))
+                elif H.edges[ei]['btype'] == 'beta-1':
+                    fout.write("patch B1 %s:%s %s:%s\n" % (segname, ei[1]+1, segname, ei[0]+1))
+            fout.write("writepsf %s.psf\n" % segname)
 
 
                

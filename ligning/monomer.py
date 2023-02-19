@@ -276,7 +276,7 @@ class Monomer():
         self.G = G_m
 
         # Initialize a big graph for monomer
-        bigG = nx.DiGraph()
+        bigG = nx.Graph()
         bigG.add_node(self.mi, mtype = self.type, color = default_color[self.type])
         self.bigG = bigG
         
