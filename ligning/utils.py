@@ -34,7 +34,7 @@ nparray = TypeVar('nparray')
 import matplotlib
 if platform.system() == 'Linux':
     matplotlib.use('Agg')
-    print('switched')
+    #print('switched')
 import matplotlib.pyplot as plt   
 # if platform.system() == 'Linux':
 #     plt.switch_backend('agg')

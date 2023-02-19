@@ -131,7 +131,6 @@ class PolymerGraph():
 
         if ring:
             C2_indices_in_monmer = [ci for ci in C2_indices_in_monmer if ci != 1]
-        #print(C2_indices_in_monmer)
 
         return C2_indices_in_monmer
 
@@ -221,7 +220,6 @@ class PolymerGraph():
         # Define the edge properties
         #new bond as carbon/oxygen indices
         linkage_new = linkage_index 
-        print(linkage_new)
         C1_node = self.G.nodes[C1_index_in_polymer]
         C2_node = self.G.nodes[C2_index_in_polymer]
         
@@ -423,7 +421,6 @@ class Polymer(PolymerGraph):
         M2_index = self.G.nodes[C2_index_in_polymer]['mi']
 
         # Add the edges to monomer nodes
-        print(linkage_new_name, M1_index, M2_index)
         if linkage_index[0] <= linkage_index[1]:
             self.bigG.add_edges_from([(M1_index, M2_index)], btype=linkage_new_name)
         else:
@@ -468,10 +465,8 @@ class Polymer(PolymerGraph):
         if monomer_new is not None:
             monomer_new.create()
             PG_temp.G = ut.join_two(PG_temp.G, monomer_new.G)
-        print("Linkage index", linkage_index)
         # Add the linkage
         new_linkage_flag = PG_temp.connect_C1_C2(linkage_index, C1_index_in_polymer, C2_index_in_polymer)
-        print("New Linkage Flag")
         # If a new linakge does form
         if new_linkage_flag: 
             # Update the polymer graph
@@ -946,8 +941,6 @@ class Polymer(PolymerGraph):
                     fout.write("patch BO4 %s:%s %s:%s\n" % (segname, ei[1]+1, segname, ei[0]+1))
                 elif H.edges[ei]['btype'] == '5-5':
                     fout.write("patch 55 %s:%s %s:%s\n" % (segname, ei[0]+1, segname, ei[1]+1))
-                elif H.edges[ei]['btype'] == '5-5':
-                    fout.write("patch 55 %s:%s %s:%s\n" % (segname, ei[0]+1, segname, ei[1]+1))
                 elif H.edges[ei]['btype'] == 'beta-5':
                     if H.nodes[ei[0]]['mtype'] == 'H':
                         fout.write("patch B5P %s:%s %s:%s\n" % (segname, ei[1]+1, segname, ei[0]+1))
@@ -956,7 +949,7 @@ class Polymer(PolymerGraph):
                 elif H.edges[ei]['btype'] == 'beta-beta':
                     fout.write("patch BB %s:%s %s:%s\n" % (segname, ei[0]+1, segname, ei[1]+1))
                 elif H.edges[ei]['btype'] == 'beta-1':
-                    fout.write("patch B1 %s:%s %s:%s\n" % (segname, ei[1]+1, segname, ei[0]+1))
+                    fout.write("patch B1 %s:%s %s:%s\n" % (segname, ei[0]+1, segname, ei[1]+1))
             fout.write("writepsf %s.psf\n" % segname)
 
 
