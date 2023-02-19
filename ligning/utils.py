@@ -34,7 +34,7 @@ nparray = TypeVar('nparray')
 import matplotlib
 if platform.system() == 'Linux':
     matplotlib.use('Agg')
-    print('switched')
+    #print('switched')
 import matplotlib.pyplot as plt   
 # if platform.system() == 'Linux':
 #     plt.switch_backend('agg')
@@ -92,7 +92,6 @@ def draw_big_graph(G: nxgraph) -> None:
         node_labels[i] = G.nodes[i]['mtype']
     # big graph is marked by hexagons 
     draw_graph(G, node_labels, node_shape = 'h', node_size=1000)
-
 
 def draw_atomic_graph(G: nxgraph) -> None:
     """Plot the atomic graph
@@ -163,8 +162,6 @@ def graph_to_mol(
         Chem.Draw.MolToFile(mol, filename, size=(500, 500))
     
     return mol
-    
-
 
 def smiles_to_formula(smiles: str) -> str:
     """Convert the smiles to the chemical formula in C, H and O
