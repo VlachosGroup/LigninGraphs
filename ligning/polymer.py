@@ -949,7 +949,7 @@ class Polymer(PolymerGraph):
                 elif H.edges[ei]['btype'] == 'beta-beta':
                     fout.write("patch BB %s:%s %s:%s\n" % (segname, ei[0]+1, segname, ei[1]+1))
                 elif H.edges[ei]['btype'] == 'beta-1':
-                    fout.write("patch B1 %s:%s %s:%s\n" % (segname, ei[0]+1, segname, ei[1]+1))
+                    fout.write("patch B1 %s:%s %s:%s\n" % (segname, ei[1]+1, segname, ei[0]+1))
             fout.write("writepsf %s.psf\n" % segname)
 
 
