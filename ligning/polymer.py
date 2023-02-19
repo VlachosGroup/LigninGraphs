@@ -896,7 +896,8 @@ class Polymer(PolymerGraph):
         
         return new_linkage_flag
 
-    def write_LigninBuilder( name: Optional[str]='test',
+    def write_LigninBuilder(self,
+        name: Optional[str]='test',
         segname: Optional[str]='L',
         save_path: Optional[str]=os.getcwd()) -> None:
         """Convert this polymer to a Tcl script that VMD and LigninBuilder can convert to a 3D structure
